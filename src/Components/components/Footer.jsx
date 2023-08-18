@@ -1,5 +1,4 @@
-import React from "react";
-import "./Footer.css"; // Importa tus estilos CSS aquí
+import "../styles/Footer.css"; // Importa tus estilos CSS aquí
 
 export default function Footer() {
     return (

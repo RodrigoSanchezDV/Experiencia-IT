@@ -1,8 +1,7 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import Nav from "./Nav";
-import "./Home.css"; 
-import Footer from "./Footer";
+import Nav from "../components/Nav";
+import "../styles/Home.css"; 
+import Footer from "../components/Footer";
 
 export default function Home() {
     return (
