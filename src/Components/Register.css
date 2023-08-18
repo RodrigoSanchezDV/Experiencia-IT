@@ -1,0 +1,49 @@
+.register-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    color: black;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  input {
+    display: flex;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Media Query para pantalla pequeña */
+  @media screen and (max-width: 600px) {
+    .input-group {
+      flex-direction: column;
+    }
+  }
+  

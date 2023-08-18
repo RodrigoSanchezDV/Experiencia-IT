@@ -1,0 +1,23 @@
+/* Home.css */
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f0f0f0;
+}
+
+/* Añade estos estilos para hacer que el navbar ocupe todo el ancho */
+.navbar {
+    width: 100%;
+}
