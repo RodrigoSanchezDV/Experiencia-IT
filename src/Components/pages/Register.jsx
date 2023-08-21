@@ -8,11 +8,11 @@ export default function Register() {
       firstName: "",
       lastName: "",
       email: "",
-      phone,
-      adress,
-      city,
-      country,
-      password: "",
+      phone: "",
+      adress: "",
+      city: "",
+      country: "",
+      password: ""
 
     },
     validationSchema: registerValidation,
@@ -49,7 +49,47 @@ export default function Register() {
         {formik.touched.email && formik.errors.email ? (
           <div>{formik.errors.email}</div>
         ) : null}
-        <button type="submit">Registrarse</button>
+          <input
+          type="number"
+          placeholder="Phone"
+          {...formik.getFieldProps("phone")}
+        />
+        {formik.touched.phone && formik.errors.phone ? (
+          <div>{formik.errors.phone}</div>
+        ) : null}
+          <input
+          type="text"
+          placeholder="Adress"
+          {...formik.getFieldProps("adress")}
+        />
+        {formik.touched.adress && formik.errors.adress ? (
+          <div>{formik.errors.adress}</div>
+        ) : null}
+          <input
+          type="text"
+          placeholder="City"
+          {...formik.getFieldProps("city")}
+        />
+        {formik.touched.city && formik.errors.city ? (
+          <div>{formik.errors.city}</div>
+        ) : null}
+          <input
+          type="text"
+          placeholder="Country"
+          {...formik.getFieldProps("country")}
+        />
+        {formik.touched.country && formik.errors.country ? (
+          <div>{formik.errors.country}</div>
+        ) : null}
+           <input
+          type="password"
+          placeholder="Password"
+          {...formik.getFieldProps("password")}
+        />
+        {formik.touched.password && formik.errors.password ? (
+          <div>{formik.errors.password}</div>
+        ) : null}
+        <button type="submit">Sing Up</button>
       </form>
     </div>
   );
