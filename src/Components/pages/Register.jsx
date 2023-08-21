@@ -1,124 +1,56 @@
-import { Link } from "react-router-dom";
-import { useState } from 'react';
-import '../styles/Register.css'; 
+import "../styles/Register.css";
+import { useFormik } from "formik";
+import { registerValidation } from "../../validations/register";
 
 export default function Register() {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    address: '',
-    city: '',
-    country: '',
-    username: '',
-    password: '',
+  const formik = useFormik({
+    initialValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone,
+      adress,
+      city,
+      country,
+      password: "",
+
+    },
+    validationSchema: registerValidation,
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+    },
   });
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Agrega aquí la lógica para manejar los datos de registro
-    console.log('Datos de registro:', formData);
-  };
-
   return (
     <div className="register-container">
       <h2>Registro</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="input-group">
-          <input
-            type="text"
-            name="firstName"
-            placeholder="Nombre"
-            value={formData.firstName}
-            onChange={handleInputChange}
-            required
-          />
-          <input
-            type="text"
-            name="lastName"
-            placeholder="Apellido"
-            value={formData.lastName}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-        <div className="input-group">
-          <input
-            type="email"
-            name="email"
-            placeholder="Correo electrónico"
-            value={formData.email}
-            onChange={handleInputChange}
-            required
-          />
-          <input
-            type="number"
-            name="phone"
-            placeholder="Teléfono"
-            value={formData.phone}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-        <div className="input-group">
-          <input
-            type="text"
-            name="address"
-            placeholder="Dirección"
-            value={formData.address}
-            onChange={handleInputChange}
-            required
-          />
-          <input
-            type="text"
-            name="city"
-            placeholder="Ciudad"
-            value={formData.city}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-        <div className="input-group">
-          <input
-            type="text"
-            name="country"
-            placeholder="País"
-            value={formData.country}
-            onChange={handleInputChange}
-            required
-          />
-          <input
-            type="text"
-            name="username"
-            placeholder="Nombre de usuario"
-            value={formData.username}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
+      <form onSubmit={formik.handleSubmit}>
         <input
-          type="password"
-          name="password"
-          placeholder="Contraseña"
-          value={formData.password}
-          onChange={handleInputChange}
-          required
+          type="text"
+          placeholder="Firs Name"
+          {...formik.getFieldProps("firstName")}
         />
+        {formik.touched.firstName && formik.errors.firstName ? (
+          <div>{formik.errors.firstName}</div>
+        ) : null}
+        <input
+          type="text"
+          placeholder="Last Name"
+          {...formik.getFieldProps("lastName")}
+        />
+        {formik.touched.lastName && formik.errors.lastName ? (
+          <div>{formik.errors.lastName}</div>
+        ) : null}
+
+        <input
+          type="text"
+          placeholder="Email"
+          {...formik.getFieldProps("email")}
+        />
+        {formik.touched.email && formik.errors.email ? (
+          <div>{formik.errors.email}</div>
+        ) : null}
         <button type="submit">Registrarse</button>
       </form>
-      <br></br>
-      <Link to='/'>Home</Link>
     </div>
   );
 }
-
-
