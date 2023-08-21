@@ -1,50 +1,47 @@
 // import { Link } from "react-router-dom";
 // import { useState } from 'react';
 import { Formik, useField } from "formik";
-import {logInValidate} from "../../validations/login";
+import { logInValidate } from "../../validations/login";
 import '../styles/Login.css';
 
-const initialValues = { email: "", password: "" }
 
 export default function Login() {
 
-  const inputField = ({ name, ...props }) => {
+  const initialValues = { email: "", password: "" }
+
+  const InputField = ({ name, ...props }) => {
     const [field, meta, helpers] = useField(name);
 
     return (
-      <inputFormik
-      value={field.value}
-      onChange = {value => helpers.setValue(value)}
-      {...props}
-      />
+      <>
+        <input
+          value={field.value}
+          onChange={event => helpers.setValue(event.target.value)}
+          {...props}
+        />
+        {meta.error && <p>{meta.error}</p>}
+      </>
     );
   };
-  //   const [username, setUsername] = useState('');
-  //   const [password, setPassword] = useState('');
 
-  //   const handleSubmit = (e) => {
-  //     e.preventDefault();
-  //     // Agrega aquí la lógica de autenticación en el servidor
-  //     console.log('Usuario:', username);
-  //     console.log('Contraseña:', password);
-  // };
 
   return (
     <Formik validationSchema={logInValidate} initialValues={initialValues} onSubmit={values => console.log(values)}>
-      {({ handleChange, handleSubmit, values }) => {
+      {({ handleSubmit }) => {
         return (
           <div className="login-container">
             <h2>Iniciar Sesión</h2>
-            <input
+            <InputField
               className="login-input"
               type="text"
+              name="email"
               placeholder="E-mail"
             />
-            
 
-            <input
+            <InputField
               className="login-input"
-              type="text"
+              type="password"
+              name="password"
               placeholder="Password"
             />
 
