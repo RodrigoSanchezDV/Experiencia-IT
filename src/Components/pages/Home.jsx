@@ -12,6 +12,9 @@ export default function Home() {
                 <Link to='/login'>Login</Link>
                 <br />
                 <Link to='/register'>Register</Link>
+                <Link to='/employeelist'>EMPLEADOS</Link>
+                <Link to='/client'> CLIENTE</Link>
+                <Link to='/recuperar-contrasena'>RECUPERAR CONTRASEÑA</Link>
             </div>
             <Footer />
         </div>

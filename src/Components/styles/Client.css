@@ -1,0 +1,23 @@
+
+.client-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  table {
+    width: 80%; /* Ajusta el ancho de la tabla según tus preferencias */
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 10px 20px; /* Ajusta el padding para hacer las celdas más grandes */
+    border: 1px solid #ccc;
+  }
+  
+  th {
+    background-color: #f2f2f2; /* Color de fondo para las celdas de encabezado */
+  }
+  

@@ -1,135 +1,120 @@
-import React, { useState, useEffect } from "react";
-import "../styles/NewClient.css";
-import SearchBar from "../pageComponents/SearchBar";
+import React, { useState } from "react";
+import "../styles/NewClient.css"; // Importa tu archivo CSS para estilos personalizados
 
-export default function NewClient() {
-  const initialClients = [
-    {
-      razonSocial: "ACliente",
-      nCuit: "12345678-1",
-      domicilioSocial: "Calle 123, Ciudad 1",
-      rubro: "Rubro 1",
-      email: "cliente1@example.com",
-      telefono: "123-456-7890",
-      paginaWeb: "www.cliente1.com",
-      acciones: "No se ",
-    },
-    {
-      razonSocial: "BCliente",
-      nCuit: "12345678-1",
-      domicilioSocial: "Calle 123, Ciudad 1",
-      rubro: "Rubro 1",
-      email: "cliente2@example.com",
-      telefono: "123-456-7890",
-      paginaWeb: "www.cliente2.com",
-      acciones: "No se ",
-    },
-    {
-      razonSocial: "CCliente ",
-      nCuit: "12345678-1",
-      domicilioSocial: "Calle 123, Ciudad 1",
-      rubro: "Rubro 1",
-      email: "cliente3@example.com",
-      telefono: "123-456-7890",
-      paginaWeb: "www.cliente3.com",
-      acciones: "No se ",
-    },
-    {
-      razonSocial: "DCliente ",
-      nCuit: "12345678-1",
-      domicilioSocial: "Calle 123, Ciudad 1",
-      rubro: "Rubro 1",
-      email: "cliente4@example.com",
-      telefono: "123-456-7890",
-      paginaWeb: "www.cliente4.com",
-      acciones: "No se ",
-    },
-    {
-      razonSocial: "ECliente ",
-      nCuit: "12345678-1",
-      domicilioSocial: "Calle 123, Ciudad 1",
-      rubro: "Rubro 1",
-      email: "cliente5@example.com",
-      telefono: "123-456-7890",
-      paginaWeb: "www.cliente5.com",
-      acciones: "No se ",
-    },
-  
-  ];
+export default function NewClientForm() {
+  const [formData, setFormData] = useState({
+    nombre: "",
+    apellido: "",
+    correo: "",
+    telefono: "",
+    direccion: "",
+    ciudad: "",
+    estado: "",
+    codigoPostal: "",
+  });
 
-  const [clients, setClients] = useState(initialClients);
-  const [sortOrder, setSortOrder] = useState("asc");
-  const [filteredClients, setFilteredClients] = useState(clients);
-
-  useEffect(() => {
-    const sortedClients = [...filteredClients];
-    sortedClients.sort((a, b) => {
-      const nameA = a.razonSocial.toLowerCase();
-      const nameB = b.razonSocial.toLowerCase();
-
-      if (sortOrder === "asc") {
-        return nameA.localeCompare(nameB);
-      } else {
-        return nameB.localeCompare(nameA);
-      }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
     });
-    setFilteredClients(sortedClients);
-  }, [sortOrder, filteredClients]); // Este efecto se ejecutará cuando cambie sortOrder o filteredClients
-
-  const handleSortByRazonSocial = () => {
-    setSortOrder(sortOrder === "asc" ? "desc" : "asc");
   };
 
-  const handleSearch = (searchTerm) => {
-    const filtered = clients.filter((client) =>
-      client.razonSocial.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setFilteredClients(filtered);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Aquí puedes manejar el envío del formulario
+    console.log(formData);
   };
 
   return (
-    <div className="employee-list-container">
-      <h2>Lista de Clientes</h2>
-      <SearchBar onSearch={handleSearch} />
-      <table>
-        <thead>
-          <tr>
-            <th>
-              Razon Social{" "}
-              <select onChange={handleSortByRazonSocial} value={sortOrder}>
-                <option value="asc">Ascendente</option>
-                <option value="desc">Descendente</option>
-              </select>
-            </th>
-            <th>N Cuit</th>
-            <th>Domicilio Social</th>
-            <th>Rubro</th>
-            <th>Email</th>
-            <th>Telefono</th>
-            <th>Pagina Web</th>
-            <th>Acciones</th>
-            {/* ... (otras columnas) */}
-          </tr>
-        </thead>
-        <tbody>
-          {filteredClients.map((client, index) => (
-            <tr key={index}>
-              <td>{client.razonSocial}</td>
-              <td>{client.nCuit}</td>
-              <td>{client.domicilioSocial}</td>
-              <td>{client.rubro}</td>
-              <td>{client.email}</td>
-              <td>{client.telefono}</td>
-              <td>{client.paginaWeb}</td>
-              <td>{client.acciones}</td>
-              {/* ... (otras celdas) */}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      <div>
-        <button>Añadir nuevo cliente</button>
-      </div>
+    <div className="form-container">
+      <h2>Formulario de Nuevo Cliente</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="nombre">Nombre:</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            value={formData.nombre}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="apellido">Apellido:</label>
+          <input
+            type="text"
+            id="apellido"
+            name="apellido"
+            value={formData.apellido}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="correo">Correo:</label>
+          <input
+            type="email"
+            id="correo"
+            name="correo"
+            value={formData.correo}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="telefono">Teléfono:</label>
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            value={formData.telefono}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="direccion">Dirección:</label>
+          <input
+            type="text"
+            id="direccion"
+            name="direccion"
+            value={formData.direccion}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="ciudad">Ciudad:</label>
+          <input
+            type="text"
+            id="ciudad"
+            name="ciudad"
+            value={formData.ciudad}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="estado">Estado:</label>
+          <input
+            type="text"
+            id="estado"
+            name="estado"
+            value={formData.estado}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="codigoPostal">Código Postal:</label>
+          <input
+            type="text"
+            id="codigoPostal"
+            name="codigoPostal"
+            value={formData.codigoPostal}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="form-group">
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
     </div>
   );
 }
