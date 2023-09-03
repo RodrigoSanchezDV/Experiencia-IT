@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "../styles/NewClient.css"; // Importa tu archivo CSS para estilos personalizados
+import React, { useState, useEffect } from "react";
+import "../styles/NewClient.css";
 import SearchBar from "../pageComponents/SearchBar";
 
 export default function NewClient() {
@@ -54,13 +54,15 @@ export default function NewClient() {
       paginaWeb: "www.cliente5.com",
       acciones: "No se ",
     },
+  
   ];
 
   const [clients, setClients] = useState(initialClients);
-  const [sortOrder, setSortOrder] = useState("asc"); // Por defecto, orden ascendente
+  const [sortOrder, setSortOrder] = useState("asc");
+  const [filteredClients, setFilteredClients] = useState(clients);
 
-  const handleSortByRazonSocial = () => {
-    const sortedClients = [...clients];
+  useEffect(() => {
+    const sortedClients = [...filteredClients];
     sortedClients.sort((a, b) => {
       const nameA = a.razonSocial.toLowerCase();
       const nameB = b.razonSocial.toLowerCase();
@@ -71,14 +73,14 @@ export default function NewClient() {
         return nameB.localeCompare(nameA);
       }
     });
-    setClients(sortedClients);
-    setSortOrder(sortOrder === "asc" ? "desc" : "asc"); // Cambia el orden actual
+    setFilteredClients(sortedClients);
+  }, [sortOrder, filteredClients]); // Este efecto se ejecutará cuando cambie sortOrder o filteredClients
+
+  const handleSortByRazonSocial = () => {
+    setSortOrder(sortOrder === "asc" ? "desc" : "asc");
   };
 
-  const [filteredClients, setFilteredClients] = useState(clients);
-
   const handleSearch = (searchTerm) => {
-    // Filtrar la lista de clientes según el término de búsqueda
     const filtered = clients.filter((client) =>
       client.razonSocial.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -106,7 +108,7 @@ export default function NewClient() {
             <th>Telefono</th>
             <th>Pagina Web</th>
             <th>Acciones</th>
-            {/* Agregar otras columnas según tus necesidades */}
+            {/* ... (otras columnas) */}
           </tr>
         </thead>
         <tbody>
@@ -120,7 +122,7 @@ export default function NewClient() {
               <td>{client.telefono}</td>
               <td>{client.paginaWeb}</td>
               <td>{client.acciones}</td>
-              {/* Agregar datos de otras columnas según corresponda */}
+              {/* ... (otras celdas) */}
             </tr>
           ))}
         </tbody>
