@@ -2,7 +2,7 @@
     background-color: white;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
     width: 300px;
     text-align: center;
     margin: 0 auto;
@@ -36,3 +36,32 @@
     background-color: #0056b3;
   }
   
+  .logo {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px; /* Ajusta la distancia desde la parte superior según sea necesario */
+  max-width: 150px; /* Ajusta el tamaño máximo de tu logo según sea necesario */
+}
+
+.password{
+  margin-top: 30px; 
+}
+
+.button-ingresar{
+  margin-top:20px;
+}
+
+
+.error-message {
+  
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ff5733; /* Color de fondo del mensaje de error */
+  color: white; /* Color del texto del mensaje de error */
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 999; /* Para asegurarte de que el mensaje esté en la parte superior */
+}
