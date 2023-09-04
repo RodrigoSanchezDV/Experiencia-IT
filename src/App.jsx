@@ -8,7 +8,7 @@ import Client from './Components/pages/Client.jsx';
 import NewClient from './Components/pages/NewClient.jsx';
 import NewAccount from './Components/pages/NewAccount.jsx';
 import CreateAccount from './Components/pages/createAccount.jsx';
-
+import CreateAccountPage2 from './Components/pages/CreateAccountPage2.jsx';
 
 const App = () => (
   <Routes>
@@ -30,6 +30,8 @@ const App = () => (
     <Route path="/newaccount" element={<NewAccount/>} />
 
     <Route path="/createaccount" element={<CreateAccount/>} />
+
+    <Route path="/createaccountpage2" element={<CreateAccountPage2/>} />
     
   </Routes>
 );
