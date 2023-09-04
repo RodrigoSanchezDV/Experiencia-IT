@@ -19,15 +19,16 @@
     margin-bottom: 10px;
   }
   
-  input {
+  .input-register {
     display: flex;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 3px;
     outline: none;
+    
   }
   
-  button {
+  .button-register {
     background-color: white;
     color: #13293D;
     border: none;
@@ -49,7 +50,7 @@
     margin-top: 10px;
   }
   
-  button:hover {
+  .button-registrarme:hover {
     background-color: #13293D;
     color: white;
   }

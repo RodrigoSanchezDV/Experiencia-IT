@@ -87,7 +87,8 @@ export default function Login() {
                 Ingresar
               </button>
               <button className="button-registrarme"type="button" onClick={handleSubmit}>
-                REGISTRARME
+                
+                <Link to="/newaccount">REGISTRARME</Link>
               </button>
 
               {loginError && (

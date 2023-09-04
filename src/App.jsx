@@ -6,7 +6,7 @@ import PasswordRecovery from './Components/pages/PasswordRecovery.jsx';
 import EmployeeList from './Components/pages/EmployeeList.jsx';
 import Client from './Components/pages/Client.jsx';
 import NewClient from './Components/pages/NewClient.jsx';
-
+import NewAccount from './Components/pages/NewAccount.jsx';
 
 
 
@@ -26,7 +26,9 @@ const App = () => (
     <Route path="/client" element={<Client/>} />
    
     <Route path="/newclient" element={<NewClient/>} />
- 
+    
+    <Route path="/newaccount" element={<NewAccount/>} />
+    
   </Routes>
 );
 

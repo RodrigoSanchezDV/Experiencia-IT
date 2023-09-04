@@ -24,7 +24,7 @@ export default function Register() {
     <div className="register-container">
       <h2>Registro</h2>
       <form onSubmit={formik.handleSubmit}>
-        <input
+        <input className="input-register"
           type="text"
           placeholder="Firs Name"
           {...formik.getFieldProps("firstName")}
@@ -32,7 +32,7 @@ export default function Register() {
         {formik.touched.firstName && formik.errors.firstName ? (
           <div>{formik.errors.firstName}</div>
         ) : null}
-        <input
+        <input className="input-register"
           type="text"
           placeholder="Last Name"
           {...formik.getFieldProps("lastName")}
@@ -41,7 +41,7 @@ export default function Register() {
           <div>{formik.errors.lastName}</div>
         ) : null}
 
-        <input
+        <input className="input-register"
           type="text"
           placeholder="Email"
           {...formik.getFieldProps("email")}
@@ -49,7 +49,7 @@ export default function Register() {
         {formik.touched.email && formik.errors.email ? (
           <div>{formik.errors.email}</div>
         ) : null}
-          <input
+          <input className="input-register"
           type="number"
           placeholder="Phone"
           {...formik.getFieldProps("phone")}
@@ -57,7 +57,7 @@ export default function Register() {
         {formik.touched.phone && formik.errors.phone ? (
           <div>{formik.errors.phone}</div>
         ) : null}
-          <input
+          <input className="input-register"
           type="text"
           placeholder="Adress"
           {...formik.getFieldProps("adress")}
@@ -65,7 +65,7 @@ export default function Register() {
         {formik.touched.adress && formik.errors.adress ? (
           <div>{formik.errors.adress}</div>
         ) : null}
-          <input
+          <input className="input-register"
           type="text"
           placeholder="City"
           {...formik.getFieldProps("city")}
@@ -73,7 +73,7 @@ export default function Register() {
         {formik.touched.city && formik.errors.city ? (
           <div>{formik.errors.city}</div>
         ) : null}
-          <input
+          <input className="input-register"
           type="text"
           placeholder="Country"
           {...formik.getFieldProps("country")}
@@ -81,7 +81,7 @@ export default function Register() {
         {formik.touched.country && formik.errors.country ? (
           <div>{formik.errors.country}</div>
         ) : null}
-           <input
+           <input className="input-register"
           type="password"
           placeholder="Password"
           {...formik.getFieldProps("password")}
@@ -89,7 +89,7 @@ export default function Register() {
         {formik.touched.password && formik.errors.password ? (
           <div>{formik.errors.password}</div>
         ) : null}
-        <button type="submit">Sing Up</button>
+        <button className="button-register" type="submit">Sing Up</button>
       </form>
     </div>
   );

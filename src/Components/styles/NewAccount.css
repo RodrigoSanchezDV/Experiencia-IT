@@ -1,0 +1,105 @@
+
+.newAccount-container {
+    background-color: #FEFCF3;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar horizontalmente */
+}
+
+.newAccount-container h2 {
+    margin-bottom: 20px;
+    color: black;
+}
+
+
+.newAccount-button,
+.button-google,
+.button-facebook {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.newAccount-input {
+    width: 80%; /* Cambia de 80% a 100% */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-top: 50px;
+    box-sizing: border-box;
+}
+
+.button-google,
+.button-facebook {
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: flex-start; /* Centrar horizontalmente */
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+    width: 80%;
+    height: 40px;
+}
+.button-facebook{
+    background-color: #1E6695;
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+.button-google {
+    background-color: #346DB4;
+}
+
+.button-google i,
+.button-facebook i {
+    margin-left: 10px;
+    color: white;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 150px;
+}
+
+.continuar{
+    background-color: white;
+    color: #13293D;
+    border: 2px solid black;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 80%;
+    
+}
+
+
+.divider {
+    width: 80%;
+    border: 1px solid #ccc; /* Color de la línea y grosor */
+    margin: 20px auto; /* Espacio alrededor de la línea */
+   
+}
+
+.button-google p,
+.button-facebook p {
+    flex: 1; /* El texto se expandirá para llenar el espacio disponible */
+    margin-right: 50px;
+    color: white;
+    font-size: 16px;
+    /* Centrar horizontalmente */
+    /* Elimina el margen predeterminado */
+}

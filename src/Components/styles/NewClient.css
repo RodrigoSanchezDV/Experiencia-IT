@@ -25,14 +25,14 @@ label {
   font-weight: bold;
 }
 
-input{
+.input-newclient{
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-button[type="submit"] {
+.button-submit[type="submit"] {
   background-color: #13293D;
   color: #fff;
   padding: 10px 20px;
@@ -42,6 +42,6 @@ button[type="submit"] {
   
 }
 
-button[type="submit"]:hover {
+.button-submit[type="submit"]:hover {
   background-color: #0056b3;
 }

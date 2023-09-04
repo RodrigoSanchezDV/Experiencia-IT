@@ -33,7 +33,7 @@ export default function NewClientForm() {
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="nombre">Nombre:</label>
-          <input
+          <input className="input-newclient"
             type="text"
             id="nombre"
             name="nombre"
@@ -43,7 +43,7 @@ export default function NewClientForm() {
         </div>
         <div className="form-group">
           <label htmlFor="apellido">Apellido:</label>
-          <input
+          <input className="input-newclient"
             type="text"
             id="apellido"
             name="apellido"
@@ -53,7 +53,7 @@ export default function NewClientForm() {
         </div>
         <div className="form-group">
           <label htmlFor="correo">Correo:</label>
-          <input
+          <input className="input-newclient"
             type="email"
             id="correo"
             name="correo"
@@ -63,7 +63,7 @@ export default function NewClientForm() {
         </div>
         <div className="form-group">
           <label htmlFor="telefono">Teléfono:</label>
-          <input
+          <input className="input-newclient"
             type="tel"
             id="telefono"
             name="telefono"
@@ -73,7 +73,7 @@ export default function NewClientForm() {
         </div>
         <div className="form-group">
           <label htmlFor="direccion">Dirección:</label>
-          <input
+          <input className="input-newclient"
             type="text"
             id="direccion"
             name="direccion"
@@ -83,7 +83,7 @@ export default function NewClientForm() {
         </div>
         <div className="form-group">
           <label htmlFor="ciudad">Ciudad:</label>
-          <input
+          <input className="input-newclient"
             type="text"
             id="ciudad"
             name="ciudad"
@@ -93,7 +93,7 @@ export default function NewClientForm() {
         </div>
         <div className="form-group">
           <label htmlFor="estado">Estado:</label>
-          <input
+          <input className="input-newclient"
             type="text"
             id="estado"
             name="estado"
@@ -103,7 +103,7 @@ export default function NewClientForm() {
         </div>
         <div className="form-group">
           <label htmlFor="codigoPostal">Código Postal:</label>
-          <input
+          <input className="input-newclient"
             type="text"
             id="codigoPostal"
             name="codigoPostal"
@@ -112,7 +112,7 @@ export default function NewClientForm() {
           />
         </div>
         <div className="form-group">
-          <button type="submit">Enviar</button>
+          <button className="button-submit" type="submit">Enviar</button>
         </div>
       </form>
     </div>
