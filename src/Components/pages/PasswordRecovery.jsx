@@ -23,7 +23,7 @@ export default function SimpleForm() {
 
   return (
     <div className="center-container">
-      <h2>Formulario Simple</h2>
+      <h2>Recuperar contraseña</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Nombre:</label>

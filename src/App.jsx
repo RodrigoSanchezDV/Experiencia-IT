@@ -22,8 +22,11 @@ const App = () => (
     <Route path="/register" element={<Register/>} />
 
     <Route path="/employeelist" element={<EmployeeList/>} />
+   
     <Route path="/client" element={<Client/>} />
+   
     <Route path="/newclient" element={<NewClient/>} />
+ 
   </Routes>
 );
 

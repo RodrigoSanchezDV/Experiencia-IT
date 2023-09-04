@@ -6,6 +6,9 @@ import logo from '/SR.png'; // Reemplaza con la ruta de tu logo
 import eyeOpenIcon from '/eye-open.png'; // Reemplaza con la ruta de tu ícono de ojo abierto
 import eyeClosedIcon from '/basic-eye-closed.png'; // Reemplaza con la ruta de tu ícono de ojo cerrado
 import { Link } from "react-router-dom";
+import Header from "../pageComponents/Header";
+
+
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required("El correo electrónico es obligatorio"),
@@ -17,6 +20,7 @@ const InputField = ({ label, type, ...props }) => {
 
   return (
     <div className="input-container">
+
       <label>{label}</label>
       <div className="input-field">
         <input
@@ -39,60 +43,64 @@ export default function Login() {
   const [loginError, setLoginError] = useState(false);
 
   return (
-    <div className="login-container">
-      <img src={logo} alt="Logo" className="logo" />
-      <h2>Iniciar Sesión</h2>
-      <Formik
-        validationSchema={validationSchema}
-        initialValues={initialValues}
-        onSubmit={(values) => {
-          // Simula una verificación de las credenciales (debes implementar la lógica real aquí)
-          if (values.email === "usuario@ejemplo.com" && values.password === "contraseña") {
-            // Inicio de sesión exitoso
-            console.log("Inicio de sesión exitoso");
-          } else {
-            // Error en el inicio de sesión
-            setLoginError(true);
-          }
-        }}
-      >
-        {({ handleSubmit }) => (
-          <>
-            <InputField
-              label="Correo Electrónico"
-              name="email"
-              type="email"
-              placeholder="E-mail"
-            />
+    <div>
+      <Header />
+      <div className="login-container">
+        <img src={logo} alt="Logo" className="logo" />
+        <h2>Iniciar Sesión</h2>
 
-            <InputField
-              label="Contraseña"
-              name="password"
-              type={showPassword ? "text" : "password"}
-              togglePassword={setShowPassword}
-              showPassword={showPassword}
-              placeholder="Password"
-            />
+        <Formik
+          validationSchema={validationSchema}
+          initialValues={initialValues}
+          onSubmit={(values) => {
+            // Simula una verificación de las credenciales (debes implementar la lógica real aquí)
+            if (values.email === "usuario@ejemplo.com" && values.password === "contraseña") {
+              // Inicio de sesión exitoso
+              console.log("Inicio de sesión exitoso");
+            } else {
+              // Error en el inicio de sesión
+              setLoginError(true);
+            }
+          }}
+        >
+          {({ handleSubmit }) => (
+            <>
+              <InputField
+                label="Correo Electrónico"
+                name="email"
+                type="email"
+                placeholder="E-mail"
+              />
 
-            <button type="button" onClick={handleSubmit}>
-              Ingresar
-            </button>
+              <InputField
+                label="Contraseña"
+                name="password"
+                type={showPassword ? "text" : "password"}
+                togglePassword={setShowPassword}
+                showPassword={showPassword}
+                placeholder="Password"
+              />
 
-            {loginError && (
-              <div className="error-message">
-                <p>Error al iniciar sesión. Verifica tus datos e intenta de nuevo.</p>
-                <p>Si olvidaste tu contraseña, puedes restablecerla o contactarnos para ayuda.</p>
-                <button onClick={() => setLoginError(false)}>Cerrar</button>
-              </div>
-            )}
-          </>
-        )}
-      </Formik>
-      <p className="password">
-              Olvidaste tu contraseña? <Link to="/recuperar-contrasena">Recuperar</Link>
-            </p>
-      {/* <p className="password">Olvidaste tu contraseña?</p>
+              <button type="button" onClick={handleSubmit}>
+                Ingresar
+              </button>
+
+              {loginError && (
+                <div className="error-message">
+                  <p>Error al iniciar sesión. Verifica tus datos e intenta de nuevo.</p>
+                  <p>Si olvidaste tu contraseña, puedes restablecerla o contactarnos para ayuda.</p>
+                  <button onClick={() => setLoginError(false)}>Cerrar</button>
+                </div>
+              )}
+            </>
+          )}
+        </Formik>
+        <p className="password">
+          Olvidaste tu contraseña? <Link to="/recuperar-contrasena">Recuperar</Link>
+        </p>
+        {/* <p className="password">Olvidaste tu contraseña?</p>
       <button type="button">Recuperar</button> */}
+      </div>
     </div>
   );
 }

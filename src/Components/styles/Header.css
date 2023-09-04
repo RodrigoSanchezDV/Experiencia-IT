@@ -1,0 +1,13 @@
+.encabezado {
+    height: 80px;
+    width: 100%;
+    background-color: #13293D; /* Cambia esto al color de fondo que desees */
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+}
+
+/* Estilo para la imagen dentro del encabezado */
+.encabezado img {
+    max-height: 100%; /* Ajusta la altura de la imagen para que se ajuste al encabezado */
+    padding-left: 20px; /* Espaciado a la izquierda de la imagen */
+}
