@@ -70,3 +70,42 @@ body {
   text-align: center;
   z-index: 999; /* Para asegurarte de que el mensaje esté en la parte superior */
 }
+
+.button-ingresar{
+  background-color: white;
+  color: #13293D;
+  border: 2px solid #13293D;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.button-ingresar:hover{
+  background-color: #13293D;
+  color: white;
+  border: 2px solid #13293D;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.button-registrarme{
+  background-color: rgb(211, 207, 207);
+  color: #13293D;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  text-decoration: none;
+}
+.button-registrarme a {
+  text-decoration: none; /* Elimina la decoración del enlace */
+  color: inherit; /* Utiliza el color de texto heredado */
+}

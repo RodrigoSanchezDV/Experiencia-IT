@@ -38,22 +38,12 @@
     width: 100%;
     border: 1px solid #ccc;
   }
-  .button-registrarme{
-    background-color: rgb(211, 207, 207);
-    color: #13293D;
-    border: none;
-    border-radius: 3px;
-    padding: 10px 20px;
-    cursor: pointer;
-    width: 100%;
-    border: 1px solid #ccc;
-    margin-top: 10px;
-  }
   
-  .button-registrarme:hover {
+  
+  /* .button-registrarme:hover {
     background-color: #13293D;
     color: white;
-  }
+  } */
   
   /* Media Query para pantalla pequeña */
   @media screen and (max-width: 600px) {

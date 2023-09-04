@@ -83,10 +83,10 @@ export default function Login() {
  <p className="password">
           Olvidaste tu contraseña? <Link to="/recuperar-contrasena">Recuperar</Link>
         </p>
-              <button type="button" onClick={handleSubmit}>
+              <button className="button-ingresar" type="button" onClick={handleSubmit}>
                 Ingresar
               </button>
-              <button className="button-registrarme"type="button" onClick={handleSubmit}>
+              <button className="button-registrarme" type="button" onClick={handleSubmit}>
                 
                 <Link to="/newaccount">REGISTRARME</Link>
               </button>
