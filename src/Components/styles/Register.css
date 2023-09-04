@@ -28,16 +28,30 @@
   }
   
   button {
-    background-color: #007bff;
-    color: white;
+    background-color: white;
+    color: #13293D;
     border: none;
     border-radius: 3px;
     padding: 10px 20px;
     cursor: pointer;
+    width: 100%;
+    border: 1px solid #ccc;
+  }
+  .button-registrarme{
+    background-color: rgb(211, 207, 207);
+    color: #13293D;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-top: 10px;
   }
   
   button:hover {
-    background-color: #0056b3;
+    background-color: #13293D;
+    color: white;
   }
   
   /* Media Query para pantalla pequeña */

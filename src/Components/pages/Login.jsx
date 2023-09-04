@@ -7,7 +7,7 @@ import eyeOpenIcon from '/eye-open.png'; // Reemplaza con la ruta de tu ícono d
 import eyeClosedIcon from '/basic-eye-closed.png'; // Reemplaza con la ruta de tu ícono de ojo cerrado
 import { Link } from "react-router-dom";
 import Header from "../pageComponents/Header";
-
+import Footer from "../pageComponents/Footer";
 
 
 const validationSchema = Yup.object().shape({
@@ -47,7 +47,7 @@ export default function Login() {
       <Header />
       <div className="login-container">
         <img src={logo} alt="Logo" className="logo" />
-        <h2>Iniciar Sesión</h2>
+        <h2>Mi cuenta SR</h2>
 
         <Formik
           validationSchema={validationSchema}
@@ -66,23 +66,28 @@ export default function Login() {
           {({ handleSubmit }) => (
             <>
               <InputField
-                label="Correo Electrónico"
+                
                 name="email"
                 type="email"
-                placeholder="E-mail"
+                placeholder="Correo"
               />
 
               <InputField
-                label="Contraseña"
+                
                 name="password"
                 type={showPassword ? "text" : "password"}
                 togglePassword={setShowPassword}
                 showPassword={showPassword}
-                placeholder="Password"
+                placeholder="Contraseña"
               />
-
+ <p className="password">
+          Olvidaste tu contraseña? <Link to="/recuperar-contrasena">Recuperar</Link>
+        </p>
               <button type="button" onClick={handleSubmit}>
                 Ingresar
+              </button>
+              <button className="button-registrarme"type="button" onClick={handleSubmit}>
+                REGISTRARME
               </button>
 
               {loginError && (
@@ -95,12 +100,11 @@ export default function Login() {
             </>
           )}
         </Formik>
-        <p className="password">
-          Olvidaste tu contraseña? <Link to="/recuperar-contrasena">Recuperar</Link>
-        </p>
+       
         {/* <p className="password">Olvidaste tu contraseña?</p>
       <button type="button">Recuperar</button> */}
       </div>
+      <Footer />
     </div>
   );
 }

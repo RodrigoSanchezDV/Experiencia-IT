@@ -1,11 +1,21 @@
-/* Footer.css */
-
 .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: center; /* Centrar verticalmente */
     width: 100%;
-    background-color: #333;
+    height: 80px;
+    background-color: #13293D;
     color: white;
     text-align: center;
     padding: 10px 0;
     position: absolute;
     bottom: 0;
+}
+
+.footer-icons {
+    display: flex;
+    margin-top: 20px;
+    gap: 40px; /* Espacio entre los íconos */
+    font-size: 30px;
 }
