@@ -10,10 +10,11 @@
   .navbar-left {
     display: flex;
     align-items: center;
+    height: 70px;
   }
   
   .logo {
-    font-size: 24px;
+    
     color: white;
     text-decoration: none;
   }
@@ -24,9 +25,11 @@
   }
   
   .nav-item {
-    margin-right: 20px;
+    margin-top: 20px;
+    margin-right: 25px;
     color: white;
     text-decoration: none;
+    font-size: 17px;
   }
   
   .mobile-menu {
