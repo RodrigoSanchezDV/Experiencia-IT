@@ -33,7 +33,7 @@ export default function NewAccount() {
                 <hr className="divider" />
                <input className="newAccount-input" name="email" type="email" placeholder="Correo"></input>
                 
-             <button className="continuar">Continuar</button>
+             <button className="continuar"><Link to="/createaccount">Continuar</Link></button>
               
             </div>
             <Footer />

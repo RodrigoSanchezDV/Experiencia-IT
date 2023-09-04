@@ -1,4 +1,3 @@
-
 .newAccount-container {
     background-color: #FEFCF3;
     padding: 20px;
@@ -10,7 +9,8 @@
     margin-top: 23px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrar horizontalmente */
+    align-items: center;
+    /* Centrar horizontalmente */
 }
 
 .newAccount-container h2 {
@@ -30,7 +30,8 @@
 }
 
 .newAccount-input {
-    width: 80%; /* Cambia de 80% a 100% */
+    width: 80%;
+    /* Cambia de 80% a 100% */
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
@@ -42,8 +43,10 @@
 .button-google,
 .button-facebook {
     display: flex;
-    align-items: center; /* Centrar verticalmente */
-    justify-content: flex-start; /* Centrar horizontalmente */
+    align-items: center;
+    /* Centrar verticalmente */
+    justify-content: flex-start;
+    /* Centrar horizontalmente */
     background-color: transparent;
     border: none;
     border-radius: 3px;
@@ -52,7 +55,8 @@
     width: 80%;
     height: 40px;
 }
-.button-facebook{
+
+.button-facebook {
     background-color: #1E6695;
     margin-top: 15px;
     margin-bottom: 35px;
@@ -75,7 +79,7 @@
     max-width: 150px;
 }
 
-.continuar{
+.continuar {
     background-color: white;
     color: #13293D;
     border: 2px solid black;
@@ -83,20 +87,39 @@
     padding: 10px 20px;
     cursor: pointer;
     width: 80%;
-    
+}
+
+.continuar:hover {
+    background-color: #13293D;
+    color: white;
+    border: 2px solid black;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 80%;
+}
+
+.continuar a {
+    text-decoration: none;
+    /* Elimina la decoración del enlace */
+    color: inherit;
+    /* Utiliza el color de texto heredado */
 }
 
 
 .divider {
     width: 80%;
-    border: 1px solid #ccc; /* Color de la línea y grosor */
-    margin: 20px auto; /* Espacio alrededor de la línea */
-   
+    border: 1px solid #ccc;
+    /* Color de la línea y grosor */
+    margin: 20px auto;
+    /* Espacio alrededor de la línea */
+
 }
 
 .button-google p,
 .button-facebook p {
-    flex: 1; /* El texto se expandirá para llenar el espacio disponible */
+    flex: 1;
+    /* El texto se expandirá para llenar el espacio disponible */
     margin-right: 50px;
     color: white;
     font-size: 16px;

@@ -7,7 +7,7 @@ import EmployeeList from './Components/pages/EmployeeList.jsx';
 import Client from './Components/pages/Client.jsx';
 import NewClient from './Components/pages/NewClient.jsx';
 import NewAccount from './Components/pages/NewAccount.jsx';
-
+import CreateAccount from './Components/pages/createAccount.jsx';
 
 
 const App = () => (
@@ -26,8 +26,10 @@ const App = () => (
     <Route path="/client" element={<Client/>} />
    
     <Route path="/newclient" element={<NewClient/>} />
-    
+
     <Route path="/newaccount" element={<NewAccount/>} />
+
+    <Route path="/createaccount" element={<CreateAccount/>} />
     
   </Routes>
 );

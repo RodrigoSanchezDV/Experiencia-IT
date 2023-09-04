@@ -1,0 +1,104 @@
+.create-account-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.round-buttons {
+    display: flex;
+    justify-content: space-between;
+
+    /* Agrega estilos para los botones redondos */
+}
+
+.round-button {
+    border-radius: 10%;
+    margin-bottom: 25px;
+
+}
+
+.titulo-create {
+    font-size: 25px;
+    color: #13293D;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.account-form {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Agrega estilos para el formulario y los inputs */
+}
+
+.input-create {
+    /* Estilos para los inputs */
+    margin-bottom: 10px;
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #8FB3CA;
+}
+
+.logo3 {
+    width: 280px;
+    height: 100px;
+}
+
+.label-create {
+    width: 80%;
+    font-size: 16px;
+    /* Estilo para los labels */
+    text-align: left;
+    /* Alinea el texto a la izquierda */
+    margin-bottom: 5px;
+    /* Espacio entre el label y el input */
+}
+
+.submit-button {
+    background-color: white;
+    color: #13293D;
+    border: 2px solid #13293D;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 81%;
+    margin-top: 30px;
+    height: 50px;
+}
+option{
+    width: 81%;
+}
+
+
+.submit-button:hover {
+    background-color: #13293D;
+    color: white;
+    border: 2px solid #13293D;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 80%;
+    margin-top: 30px;
+    height: 50px;
+}
+
+.p-create {
+    width: 80%;
+    text-align: start;
+    margin-top: 40px;
+}

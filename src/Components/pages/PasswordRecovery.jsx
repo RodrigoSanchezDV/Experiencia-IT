@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/PasswordRecovery.css"
-
+import Header from "../pageComponents/Header";
+import Footer from "../pageComponents/Footer";
 export default function SimpleForm() {
   const [formData, setFormData] = useState({
     name: "",
@@ -22,7 +23,10 @@ export default function SimpleForm() {
   };
 
   return (
+    <div>
+    <Header />
     <div className="center-container">
+      
       <h2>Recuperar contraseña</h2>
       <form onSubmit={handleSubmit}>
         <div>
@@ -49,6 +53,8 @@ export default function SimpleForm() {
         </div>
         <button type="submit">Enviar</button>
       </form>
+      <Footer/>
+    </div>
     </div>
   );
 }
