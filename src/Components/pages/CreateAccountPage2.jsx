@@ -42,6 +42,12 @@ export default function CreateAccountPage2() {
         <div className="create-account-container">
             <img src={logo3} alt="Logo3" className="logo3" />
             <h5 className='titulo-create'>Hablanos un poco de ti</h5>
+            <div className="round-buttons">
+                <button className="round-button">Botón 1</button>
+                <button className="round-button">Botón 2</button>
+                <button className="round-button">Botón 3</button>
+                <button className="round-button">Botón 4</button>
+            </div>
             <div className="cv-upload">
                 <i className="fa-solid fa-file-arrow-up" style={{ fontSize: '40px', marginTop: '5px' }}></i>
                 <p>Completa los campos necesarios de forma automática subiendo tu CV</p>
@@ -64,31 +70,46 @@ export default function CreateAccountPage2() {
                         <option value="selecciona">Año</option>
                     </select>
                 </div>
-                <label className='label-create'>Apellidos</label>
-                <input className='input-create' type="text" />
-                <label className='label-create'>Correo</label>
-                <input className='input-create' type="text" placeholder="ejemplo@gmail.com" />
-                <label className='label-create'>Contraseña</label>
-                <input className='input-create' type="password" />
+                <label className='label-create'>Tipo identificacion</label>
+                <div className='dni'>
+                    <select className='select-create'>
+                        <option value="selecciona">Selecciona</option>
+                        <option value="dni">DNI</option>
+                        <option value="le">LE</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <input className='input-create' type="text" />
+                </div>
+
+                <label className='label-create'>Telefono</label>
+                <div className='tel'>
+                    <select className='select-create'>
+                        <option value="selecciona">Selecciona</option>
+                        <option value="dni">+54</option>
+                        <option value="le">011</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <input className='input-create' type="text" />
+                </div>
+
+
+                <label className='label-create'>Foto</label>
+                <div className="foto-container">
+                    <p className="texto-izquierdo">Si no la tienes ahora, no te preocupes, la podrás añadir mas adelante.</p>
+                    <label htmlFor="input-foto" className="icono-derecho">
+                        <i className="fas fa-camera"></i> Subir Foto
+                        <input type="file" id="input-foto" className="hidden" accept="image/*" />
+                    </label>
+                </div>
+
                 <label className='label-create'>Pais</label>
-                <select className='select-create'>
-                    <option value="selecciona">Selecciona un país</option>
-                    <option value="pais1">País 1</option>
-                    <option value="pais2">País 2</option>
-                    <option value="pais3">País 3</option>
-                </select>
+                <input className='input-create' type="text" />
                 <label className='label-create'>Provincia</label>
-                <select className='select-create'>
-                    <option value="selecciona">Selecciona un país</option>
-                    <option value="provincia1">provincia 1</option>
-                    <option value="provincia2">provincia 2</option>
-                    <option value="provincia3">provincia 3</option>
-                </select>
-                <label className='label-create'>Puesto de trabajo deseado</label>
+                <input className='input-create' type="text" />
+                <label className='label-create'>Ciudad</label>
                 <input className='input-create' type="text" />
             </form>
             <button className="submit-button">CONTINUAR</button>
-            <p className="p-create">Al hacer click en "CONTINUAR", acepta las Condiciones legles y la Politica de privacidad de Smart Resources para crear una cuenta, aplicar a vacantes de empleo, contar con potenciales empleadores y recibir comunicaciones, entre otros servicios. Ver detalle legal.</p>
         </div>
     );
 }

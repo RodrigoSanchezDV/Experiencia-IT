@@ -15,7 +15,7 @@
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    
+
 }
 
 .cv-button input[type="file"] {
@@ -28,14 +28,63 @@
     cursor: pointer;
 }
 
-.formato{
+.formato {
     margin-top: 0px;
     color: gray;
 }
 
 
-.date-of-birth {
-    display: flex; /* Muestra los select en línea */
-    gap: 10px; /* Espacio entre los select (ajusta según tus preferencias) */
-width: 70%;  
+.date-of-birth, .dni, .tel {
+    display: flex;
+    /* Muestra los select en línea */
+    gap: 10px;
+    /* Espacio entre los select (ajusta según tus preferencias) */
+    width: 80%;
+}
+
+.label-create{
+    margin-top: 15px;
+}
+
+
+.foto-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 80%;
+}
+
+.texto-izquierdo {
+    flex-grow: 1;
+    margin-right: 10px;
+    color:gray;
+    text-align: start;
+
+}
+
+
+
+.icono-derecho {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icono-derecho:hover {
+    background-color: #0056b3;
+}
+
+.icono-derecho i {
+    margin-right: 5px;
+}
+
+/* Estilo para el input de archivo oculto */
+.hidden {
+    display: none;
 }
