@@ -1,0 +1,17 @@
+.estudios, .centro-educativo, .estado-estudios{
+    width: 100%;
+}
+
+
+.date-of-study{
+    display: flex;
+    /* Muestra los select en línea */
+    gap: 10px;
+    /* Espacio entre los select (ajusta según tus preferencias) */
+    width: 80%;
+}
+
+.label-create{
+    margin-top: 15px;
+}
+

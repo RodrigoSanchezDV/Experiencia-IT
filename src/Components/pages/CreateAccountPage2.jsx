@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import '../styles/CreateAccountPage2.css';
 import logo3 from '/Logo3.png';
+import Footer from "../pageComponents/Footer";
+import { Link } from "react-router-dom";
 
 export default function CreateAccountPage2() {
     useEffect(() => {
@@ -39,6 +41,7 @@ export default function CreateAccountPage2() {
     }, []); // El segundo argumento vacío [] indica que este efecto se ejecutará solo una vez después del montaje.
 
     return (
+        <div>
         <div className="create-account-container">
             <img src={logo3} alt="Logo3" className="logo3" />
             <h5 className='titulo-create'>Hablanos un poco de ti</h5>
@@ -109,7 +112,9 @@ export default function CreateAccountPage2() {
                 <label className='label-create'>Ciudad</label>
                 <input className='input-create' type="text" />
             </form>
-            <button className="submit-button">CONTINUAR</button>
+            <button className="submit-button"><Link to='/createaccountpage3'>CONTINUAR</Link></button>
+        </div>
+        <Footer />
         </div>
     );
 }
