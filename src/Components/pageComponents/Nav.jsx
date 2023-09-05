@@ -8,7 +8,7 @@ export default function Nav() {
           </div>
         <div className="navbar-right">
           <a href="#" className="nav-item">Sobre nosotros</a>
-          <a href="#" className="nav-item">Carga CV</a>
+        
           <a href="#" className="nav-item">Buscar Empleo</a>
           <a href="#" className="nav-item">Ingresar</a>
           <div className="mobile-menu">

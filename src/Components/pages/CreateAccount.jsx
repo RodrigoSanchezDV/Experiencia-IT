@@ -6,7 +6,7 @@ import Footer from "../pageComponents/Footer";
 
 export default function CreateAccount() {
     return (
-        <div>
+        <div className='create-account'>
         <div className="create-account-container">
             <img src={logo3} alt="Logo3" className="logo3" />
             <h5 className='titulo-create'>Empieza a crear tu cuenta</h5>

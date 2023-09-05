@@ -1,3 +1,7 @@
+.create-account {
+    position: relative; /* Asegura que el pie de página fluya debajo del contenido */
+}
+
 .create-account-container {
     display: flex;
     flex-direction: column;
