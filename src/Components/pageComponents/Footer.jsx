@@ -9,7 +9,7 @@ export default function Footer() {
                 <div className="links-cont">
                     <a href="#" >Sobre Nosotros</a>
                     <a href="#" >Buscar Empleo</a>
-                    <a href="#" >Ingresar</a>
+                    <a href="/check" >Ingresar</a>
                 </div>
 
                 <div className="footer-icons">

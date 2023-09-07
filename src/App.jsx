@@ -11,13 +11,15 @@ import CreateAccount from './Components/pages/CreateAccount.jsx';
 import CreateAccountPage2 from './Components/pages/CreateAccountPage2.jsx';
 import CreateAccountPage3 from './Components/pages/CreateAccountPage3.jsx';
 import Check from './Components/pages/Check.jsx';
-
+import PerfilRecruiter from './Components/pages/PerfilRecruiter.jsx';
 const App = () => (
   <Routes>
 
     <Route path="/" element={<Home/>} />
 
     <Route path="/login" element={<Login/>} />
+
+    <Route path="/perfilrecruiter" element={<PerfilRecruiter/>} />
 
     <Route path="/recuperar-contrasena" element={<PasswordRecovery/>} />
 
