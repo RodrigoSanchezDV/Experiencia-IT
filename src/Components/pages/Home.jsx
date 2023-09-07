@@ -124,9 +124,9 @@ export default function Home() {
                 <div className="unase-content">
                     <img src="../../../public/logo4.png" alt="" />
                     <div className="unase-text">
-                    <h2 className="h2-manos">Únase a Nosotros</h2>
-                    <p className="p-manos">Ya sea que sea una empresa que busca simplificar su proceso de selección y onboarding o un talentoso candidato en busca de su próximo desafío profesional, Smart Resources es su socio de confianza. Juntos, podemos crear un futuro laboral más brillante y exitoso.
-¡Bienvenido a Smart Resources, donde el talento encuentra su hogar y las empresas encuentran su ventaja competitiva!</p>
+                        <h2 className="h2-manos">Únase a Nosotros</h2>
+                        <p className="p-manos">Ya sea que sea una empresa que busca simplificar su proceso de selección y onboarding o un talentoso candidato en busca de su próximo desafío profesional, Smart Resources es su socio de confianza. Juntos, podemos crear un futuro laboral más brillante y exitoso.
+                            ¡Bienvenido a Smart Resources, donde el talento encuentra su hogar y las empresas encuentran su ventaja competitiva!</p>
                     </div>
                 </div>
             </div>
