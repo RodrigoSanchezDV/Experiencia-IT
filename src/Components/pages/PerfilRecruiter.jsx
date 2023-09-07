@@ -11,24 +11,36 @@ export default function PerfilRecruiter() {
                 <h1>Perfil recruiter</h1>
                 <div className="card-container">
                     <div className="large-card">
-                        <img></img>
-                        <label>Pais</label>
-                        <input></input>
-                        <label>Correo</label>
-                        <input></input>
-                        <label>Télefono</label>
-                        <input></input>
-                        <button>EDITAR PERFIL</button>
+                        <div className="top-section">
+                            <img src="tu-imagen.jpg" alt="Imagen de perfil" />
+                            <div className="info">
+                                <p>Nombre: Juan</p>
+                                <p>Edad: 30 años</p>
+                            </div>
+                        </div>
+                        <div className="bottom-section">
+                            <label>Pais</label>
+                            <input type="text" />
+                            <label>Correo</label>
+                            <input type="email" />
+                            <label>Télefono</label>
+                            <input type="tel" />
+                            <button className="button-section">EDITAR PERFIL</button>
+                        </div>
                     </div>
                     <div className="small-cards">
                         <div className="small-card">
                             <h3 className="h3-perfilrecruiter">Clientes asignados</h3>
                             <button>VER LISTADO</button>
                         </div>
-                        <div className="small-card"> <h3 className="h3-perfilrecruiter">Vacantes asignadas</h3>
-                            <button>VER LISTADO</button></div>
-                        <div className="small-card"> <h3 className="h3-perfilrecruiter">Lista de postulantes</h3>
-                            <button>VER LISTADO</button></div>
+                        <div className="small-card">
+                            <h3 className="h3-perfilrecruiter">Vacantes asignadas</h3>
+                            <button>VER LISTADO</button>
+                        </div>
+                        <div className="small-card">
+                            <h3 className="h3-perfilrecruiter">Lista de postulantes</h3>
+                            <button>VER LISTADO</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -36,3 +48,4 @@ export default function PerfilRecruiter() {
         </div>
     );
 }
+
