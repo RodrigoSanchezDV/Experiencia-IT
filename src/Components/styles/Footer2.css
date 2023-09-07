@@ -1,0 +1,27 @@
+.footer2-container {
+    background-color: #13293D;
+    color: #fff;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.top-footer2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer2-icons {
+    margin-bottom: 20px; /* Espacio entre los iconos y el párrafo */
+}
+
+.fa-brands {
+    font-size: 24px; /* Tamaño de los iconos */
+    margin: 0 10px; /* Espacio entre los iconos */
+}
+
+p {
+    margin: 0; /* Elimina el margen predeterminado del párrafo */
+}

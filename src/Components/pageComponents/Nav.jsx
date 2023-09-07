@@ -10,7 +10,7 @@ export default function Nav() {
           <a href="#" className="nav-item">Sobre nosotros</a>
         
           <a href="#" className="nav-item">Buscar Empleo</a>
-          <a href="#" className="nav-item">Ingresar</a>
+          <a href="/check" className="nav-item">Ingresar</a>
           <div className="mobile-menu">
             <div className="mobile-icon"></div>
           </div>

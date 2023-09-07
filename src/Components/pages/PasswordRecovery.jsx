@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/PasswordRecovery.css"
 import Header from "../pageComponents/Header";
-import Footer from "../pageComponents/Footer";
+import Footer2 from "../pageComponents/Footer2";
 export default function SimpleForm() {
   const [formData, setFormData] = useState({
     name: "",
@@ -53,7 +53,7 @@ export default function SimpleForm() {
         </div>
         <button type="submit">Enviar</button>
       </form>
-      <Footer/>
+      <Footer2 />
     </div>
     </div>
   );

@@ -7,7 +7,7 @@ import eyeOpenIcon from '/eye-open.png'; // Reemplaza con la ruta de tu ícono d
 import eyeClosedIcon from '/basic-eye-closed.png'; // Reemplaza con la ruta de tu ícono de ojo cerrado
 import { Link } from "react-router-dom";
 import Header from "../pageComponents/Header";
-import Footer from "../pageComponents/Footer";
+import Footer2 from "../pageComponents/Footer2";
 
 
 const validationSchema = Yup.object().shape({
@@ -105,7 +105,7 @@ export default function Login() {
         {/* <p className="password">Olvidaste tu contraseña?</p>
       <button type="button">Recuperar</button> */}
       </div>
-      <Footer />
+      <Footer2 />
     </div>
   );
 }

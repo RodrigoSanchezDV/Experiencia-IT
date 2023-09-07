@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/CreateAccountPage3.css';
 import logo3 from '/Logo3.png';
-import Footer from "../pageComponents/Footer";
+import Footer2 from "../pageComponents/Footer2";
 import { Link } from "react-router-dom";
 
 export default function CreateAccountPage3() {
@@ -90,7 +90,7 @@ export default function CreateAccountPage3() {
                 <button className="submit-button"><Link to='/createaccountpage3'>Añadir</Link></button>
            
             </div>
-            <Footer />
+            <Footer2 />
         </div>
     );
 }

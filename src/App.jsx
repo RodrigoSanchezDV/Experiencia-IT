@@ -10,6 +10,7 @@ import NewAccount from './Components/pages/NewAccount.jsx';
 import CreateAccount from './Components/pages/CreateAccount.jsx';
 import CreateAccountPage2 from './Components/pages/CreateAccountPage2.jsx';
 import CreateAccountPage3 from './Components/pages/CreateAccountPage3.jsx';
+import Check from './Components/pages/Check.jsx';
 
 const App = () => (
   <Routes>
@@ -21,6 +22,8 @@ const App = () => (
     <Route path="/recuperar-contrasena" element={<PasswordRecovery/>} />
 
     <Route path="/register" element={<Register/>} />
+
+    <Route path="/check" element={<Check/>} />
 
     <Route path="/employeelist" element={<EmployeeList/>} />
    

@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/CreateAccount.css';
 import logo3 from '/Logo3.png';
 import { Link } from "react-router-dom";
-import Footer from "../pageComponents/Footer";
+import Footer2 from "../pageComponents/Footer2";
 
 export default function CreateAccount() {
     return (
@@ -52,7 +52,7 @@ export default function CreateAccount() {
             <p className="p-create">Al hacer click en "CONTINUAR", acepta las Condiciones legles y la Politica de privacidad de Smart Resources para crear una cuenta, aplicar a vacantes de empleo, contar con potenciales empleadores y recibir comunicaciones, entre otros servicios. Ver detalle legall.</p>
 
         </div>
-        <Footer />
+        <Footer2 />
         </div>
     );
 }

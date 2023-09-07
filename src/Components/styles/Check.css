@@ -1,0 +1,47 @@
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Esto ajusta la altura para centrar verticalmente */
+    background-color: #fff; /* Cambia el color de fondo según sea necesario */
+margin-top: 20px;
+
+}
+
+
+
+.check-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fff;
+}
+
+
+
+.button-container {
+    margin-top: 20px; 
+    display: flex;/* Espacio entre el logo y los botones */
+    flex-direction: column; /* Colocar los botones en columna */
+    align-items: center; /* Centrar horizontalmente los botones */
+
+}
+
+.button {
+    background-color: #13293D; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    margin-bottom: 40px; /* Espacio entre los botones */
+    border: none; /* Quita el borde del botón si lo deseas */
+    cursor: pointer;
+    width: 350px; /* Ancho fijo para los botones */
+  
+}
+
+.button:hover {
+    background-color: white; /* Cambia el color de fondo en el hover */
+    color: #13293D;
+    border: 1px solid #13293D;
+}
