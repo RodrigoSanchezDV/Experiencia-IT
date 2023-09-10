@@ -1,5 +1,3 @@
-import React from "react";
-
 import "../styles/Footer.css";
 
 export default function Footer() {
@@ -13,10 +11,10 @@ export default function Footer() {
                 </div>
 
                 <div className="footer-icons">
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-linkedin"></i>
-                    <i class="fa-brands fa-twitter"></i>
+                    <i className="fa-brands fa-facebook"></i>
+                    <i className="fa-brands fa-instagram"></i>
+                    <i className="fa-brands fa-linkedin"></i>
+                    <i className="fa-brands fa-twitter"></i>
                 </div>
 
                 <img src="../../public/logo-footer.png" alt="logo-footer" />

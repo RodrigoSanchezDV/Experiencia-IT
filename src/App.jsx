@@ -1,17 +1,17 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from './Components/pages/Home.jsx';
-import Login from './Components/pages/Login.jsx';
-import Register from './Components/pages/Register.jsx';
-import PasswordRecovery from './Components/pages/PasswordRecovery.jsx';
-import EmployeeList from './Components/pages/EmployeeList.jsx';
-import Client from './Components/pages/Client.jsx';
-import NewClient from './Components/pages/NewClient.jsx';
-import NewAccount from './Components/pages/NewAccount.jsx';
-import CreateAccount from './Components/pages/CreateAccount.jsx';
-import CreateAccountPage2 from './Components/pages/CreateAccountPage2.jsx';
-import CreateAccountPage3 from './Components/pages/CreateAccountPage3.jsx';
-import Check from './Components/pages/Check.jsx';
-import PerfilRecruiter from './Components/pages/PerfilRecruiter.jsx';
+import Home from './pages/Home.jsx';
+import Login from './pages/Login.jsx';
+import Register from './pages/Register.jsx';
+import PasswordRecovery from './pages/PasswordRecovery.jsx';
+import EmployeeList from './pages/EmployeeList.jsx';
+import Client from './pages/Client.jsx';
+import NewClient from './pages/NewClient.jsx';
+import NewAccount from './pages/NewAccount.jsx';
+import CreateAccount from './pages/CreateAccount.jsx';
+import CreateAccountPage2 from './pages/CreateAccountPage2.jsx';
+import CreateAccountPage3 from './pages/CreateAccountPage3.jsx';
+import Check from './pages/Check.jsx';
+import PerfilRecruiter from './pages/PerfilRecruiter.jsx';
 const App = () => (
   <Routes>
 

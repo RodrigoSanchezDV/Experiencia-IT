@@ -1,8 +1,8 @@
 //import { Link } from "react-router-dom";
 import React from "react";
-import Nav from "../pageComponents/Nav";
+import Nav from "../Components/Nav";
 import "../styles/Home.css";
-import Footer from "../pageComponents/Footer";
+import Footer from "../Components/Footer";
 import imgPrincipal from '/img-principal.png'; // Cambié la ruta de la imagen
 
 export default function Home() {

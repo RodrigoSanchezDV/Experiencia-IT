@@ -6,8 +6,8 @@ import logo from '/SR.png'; // Reemplaza con la ruta de tu logo
 import eyeOpenIcon from '/eye-open.png'; // Reemplaza con la ruta de tu ícono de ojo abierto
 import eyeClosedIcon from '/basic-eye-closed.png'; // Reemplaza con la ruta de tu ícono de ojo cerrado
 import { Link } from "react-router-dom";
-import Header from "../pageComponents/Header";
-import Footer2 from "../pageComponents/Footer2";
+import Header from "../Components/Header";
+import Footer2 from "../Components/Footer2";
 
 
 

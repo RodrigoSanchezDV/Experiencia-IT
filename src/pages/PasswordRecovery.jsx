@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/PasswordRecovery.css"
-import Header from "../pageComponents/Header";
-import Footer2 from "../pageComponents/Footer2";
+import Header from "../Components/Header";
+import Footer2 from "../Components/Footer2";
 export default function SimpleForm() {
   const [formData, setFormData] = useState({
     name: "",

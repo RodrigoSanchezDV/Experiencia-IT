@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/EmployeeList.css"; // Importa tu archivo CSS para estilos personalizados
-import SearchBar from "../pageComponents/SearchBar";
+import SearchBar from "../Components/SearchBar";
 
 export default function EmployeeList() {
   const initialEmployees = [

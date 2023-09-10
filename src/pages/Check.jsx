@@ -1,6 +1,6 @@
+import { Link } from "react-router-dom";
 import "../styles/Check.css";
 import logo2 from '/Logo2.png'; // Reemplaza con la ruta de tu logo
-import { Link } from "react-router-dom";
 export default function Check() {
     return (
         <div className="check-container">

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Client.css";
-import SearchBar from "../pageComponents/SearchBar";
+import SearchBar from "../Components/SearchBar";
 import { Link } from "react-router-dom";
 export default function NewClient() {
   const initialClients = [

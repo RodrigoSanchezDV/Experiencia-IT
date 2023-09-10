@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/CreateAccountPage3.css';
 import logo3 from '/Logo3.png';
-import Footer2 from "../pageComponents/Footer2";
+import Footer2 from "../Components/Footer2";
 import { Link } from "react-router-dom";
 
 export default function CreateAccountPage3() {

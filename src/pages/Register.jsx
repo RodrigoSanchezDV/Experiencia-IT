@@ -1,6 +1,6 @@
 import "../styles/Register.css";
 import { useFormik } from "formik";
-import { registerValidation } from "../../validations/register";
+import { registerValidation } from "../validations/register";
 
 export default function Register() {
   const formik = useFormik({

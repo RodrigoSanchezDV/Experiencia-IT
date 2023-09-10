@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/PerfilRecruiter.css";
-import Header from "../pageComponents/Header";
-import Footer2 from "../pageComponents/Footer2";
+import Header from "../Components/Header";
+import Footer2 from "../Components/Footer2";
 
 export default function PerfilRecruiter() {
     return (
