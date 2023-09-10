@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import '../styles/CreateAccountPage2.css';
 import logo3 from '/Logo3.png';
 import Footer2 from "../Components/Footer2";

@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styles/CreateAccount.css';
 import logo3 from '/Logo3.png';
 import { Link } from "react-router-dom";

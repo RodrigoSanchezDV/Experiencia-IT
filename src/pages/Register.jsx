@@ -1,7 +1,7 @@
 import "../styles/Register.css";
 import { useFormik } from "formik";
 import { registerValidation } from "../validations/register";
-
+import { apiService} from "../API/service.js";
 export default function Register() {
   const formik = useFormik({
     initialValues: {
@@ -13,13 +13,15 @@ export default function Register() {
       city: "",
       country: "",
       password: ""
-
     },
     validationSchema: registerValidation,
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+    onSubmit: async (values) => {
+      const res = await apiService.onSigUp(values)
+      console.log("Respuesta del register")
+      console.log(res)
     },
   });
+  
   return (
     <div className="register-container">
       <h2>Registro</h2>
@@ -81,7 +83,7 @@ export default function Register() {
         {formik.touched.country && formik.errors.country ? (
           <div>{formik.errors.country}</div>
         ) : null}
-           <input className="input-register"
+          <input className="input-register"
           type="password"
           placeholder="Password"
           {...formik.getFieldProps("password")}
