@@ -1,5 +1,3 @@
-//import { Link } from "react-router-dom";
-import React from "react";
 import Nav from "../Components/Nav";
 import "../styles/Home.css";
 import Footer from "../Components/Footer";
