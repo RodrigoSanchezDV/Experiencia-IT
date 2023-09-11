@@ -2,7 +2,9 @@ import "../styles/Register.css";
 import { useFormik } from "formik";
 import { registerValidation } from "../validations/register";
 import { apiService} from "../API/service.js";
+import { useNavigate } from "react-router-dom";
 export default function Register() {
+  const navigate = useNavigate()
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -16,9 +18,14 @@ export default function Register() {
     },
     validationSchema: registerValidation,
     onSubmit: async (values) => {
-      const res = await apiService.onSigUp(values)
-      console.log("Respuesta del register")
-      console.log(res)
+      try {
+        const res = await apiService.onSignUp(values)
+        console.log("Respuesta del registro")
+        console.log(res)
+        navigate("/login")
+      } catch (error) {
+        console.log(error)
+      }
     },
   });
   

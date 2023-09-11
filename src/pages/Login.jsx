@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Formik, useField } from "formik";
+import { useNavigate } from "react-router-dom";
 import { logInValidation } from "../validations/login.js";
 import "../styles/Login.css"; // Asegúrate de ajustar la ruta a tu archivo CSS
 import logo from "/SR.png"; // Reemplaza con la ruta de tu logo
@@ -30,11 +31,13 @@ const InputField = ({ togglePassword, showPassword, label, type, ...props }) => 
 };
 
 export default function Login() {
+  const navigate = useNavigate()
   const initialValues = { email: "", password: "" };
   const [showPassword, setShowPassword] = useState(false);
   const [loginError, setLoginError] = useState(false);
 
   return (
+
     <div>
       <Header />
       <div className="login-container">
@@ -45,9 +48,14 @@ export default function Login() {
           validationSchema={validationSchema}
           initialValues={initialValues}
           onSubmit={async (values) => {
-            const res = await apiService.onSigIn(values)
-            console.log("Respuesta del login")
-            console.log(res)
+            try {
+              const res = await apiService.onSignIn(values)
+              console.log("Respuesta del login")
+              console.log(res)
+              navigate("/")
+            } catch (error) {
+              console.log(error)
+            }
           }}
         >
           {({ handleSubmit }) => (
