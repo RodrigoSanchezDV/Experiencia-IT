@@ -25,7 +25,7 @@ export default function Nav() {
         <Link href="#" className="nav-item">
           Buscar Empleo
         </Link>
-        <Link href="/check" className="nav-item">
+        <Link to="/check" className="nav-item">
           Ingresar
         </Link>
         <button
