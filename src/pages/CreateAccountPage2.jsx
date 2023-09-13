@@ -88,8 +88,8 @@ export default function CreateAccountPage2() {
                 <div className='tel'>
                     <select className='select-create'>
                         <option value="selecciona">Selecciona</option>
-                        <option value="dni">+54</option>
-                        <option value="le">011</option>
+                        <option value="+54">+54</option>
+                        <option value="011">011</option>
                         <option value="otro">Otro</option>
                     </select>
                     <input className='input-create' type="text" />

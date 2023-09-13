@@ -22,14 +22,14 @@ export default function NewAccount() {
             <div className="newAccount-container">
                 <img src={logo} alt="Logo" className="logo" />
                 <h2>Tu próximo trabajo está aquí</h2>
-                <button className="button-google">
+                {/* <button className="button-google">
                     <i class="fa-brands fa-google"></i>
                     <p>Continua con google</p>
                 </button>
                 <button className="button-facebook">
                     <i class="fa-brands fa-facebook"></i>
                     <p>Continua con facebook</p>
-                </button>
+                </button> */}
                 <hr className="divider" />
                <input className="newAccount-input" name="email" type="email" placeholder="Correo"></input>
                 

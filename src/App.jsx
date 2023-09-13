@@ -22,17 +22,17 @@ const App = () => (
 
     <Route path="/recuperar-contrasena" element={<PasswordRecovery />} />
 
-    <Route path="/register" element={<Register />} />
+    <Route path="/register" element={<Register />} /> 
 
-    <Route path="/check" element={<Check />} />
+    <Route path="/check" element={<Check />} /> //* para redireccionar a los formularios de registro según rol
 
     <Route path="/employeelist" element={<EmployeeList />} />
 
-    <Route path="/client" element={<Client />} />
+    <Route path="/client" element={<Client />} />    //* Lista de clientes
 
-    <Route path="/newclient" element={<NewClient />} />
+    <Route path="/newclient" element={<NewClient />} />  //* Form para cargar nuevo cliente
 
-    <Route path="/newaccount" element={<NewAccount />} />
+    <Route path="/newaccount" element={<NewAccount />} />  //* Registro de nuevos talentos (usa los "createaccount")
 
     <Route path="/createaccount" element={<CreateAccount />} />
 
