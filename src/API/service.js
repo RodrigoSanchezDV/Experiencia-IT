@@ -9,7 +9,15 @@ export const apiService = {
         "Content-Type": "application/json",
       },
     };
-    let res = sigInData;
+    let res = {
+        status: true,
+        data:{
+          roll: "solicitantes",
+          id: "1",
+          email: "xxprueba@gmail.com",
+          user_name: "Rodrigo Sanchez"
+        }
+      };
     try {
       /* res = await fetch(url, params); */
     } catch (error) {

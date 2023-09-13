@@ -1,14 +1,15 @@
-import "../styles/Nav.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { apiService } from "../API/service";
+import { AuthContext } from "../context/authContext.jsx"
+import "../styles/Nav.css";
+
 export default function Nav() {
-  const navigate = useNavigate()
+  const { handleLogOut, user } = useContext(AuthContext);
   const logOut = async () => {
-    const resLogOut = await apiService.onLogOut({ id:"PRUEBA" });
-    console.log("Log cerrar sesion")
-    console.log(resLogOut);
-    if (resLogOut) {
-      navigate("/login")
+    const res = await apiService.onLogOut({id:user.id});
+    if (res) {
+      handleLogOut()
     }
   }
 
@@ -34,6 +35,7 @@ export default function Nav() {
         >
           Cerrar sesion
         </button>
+        
         <div className="mobile-menu">
           <div className="mobile-icon"></div>
         </div>

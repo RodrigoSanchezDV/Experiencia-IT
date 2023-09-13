@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Formik, useField } from "formik";
 import { useNavigate } from "react-router-dom";
 import { logInValidation } from "../validations/login.js";
@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import Header from "../Components/Header";
 import Footer2 from "../Components/Footer2";
 import { apiService} from "../API/service.js";
-
+import { AuthContext } from "../context/authContext.jsx"
 
 const validationSchema = logInValidation
 
@@ -32,6 +32,7 @@ const InputField = ({ togglePassword, showPassword, label, type, ...props }) => 
 
 export default function Login() {
   const navigate = useNavigate()
+  const { handleLogin } = useContext(AuthContext);
   const initialValues = { email: "", password: "" };
   const [showPassword, setShowPassword] = useState(false);
   const [loginError, setLoginError] = useState(false);
@@ -47,12 +48,15 @@ export default function Login() {
         <Formik
           validationSchema={validationSchema}
           initialValues={initialValues}
-          onSubmit={async (values) => {
+          onSubmit={ async (values) => {
             try {
               const res = await apiService.onSignIn(values)
-              console.log("Respuesta del login")
-              console.log(res)
-              navigate("/")
+              if(res.status){
+                let finallyUser = {...res.data}
+                console.log(finallyUser)
+                handleLogin(finallyUser)
+                navigate("/")
+              }
             } catch (error) {
               console.log(error)
             }
