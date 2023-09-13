@@ -5,6 +5,28 @@
     align-items: center;
     text-align: center;
   }
+  /* Tu archivo CSS personalizado */
+
+.text-employee-list {
+  display: flex;
+  align-items: center; /* Centrar verticalmente el contenido */
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.left-icon {
+  margin-right: 10px; /* Espacio a la derecha del icono (ajusta según sea necesario) */
+}
+
+
+  .h2-employee-list{
+    background-color: #13293D;
+    width: 100%;
+    margin: 50px;
+    color: white;
+    text-align: center;
+  }
   
   table {
     width: 80%; /* Ajusta el ancho de la tabla según tus preferencias */
