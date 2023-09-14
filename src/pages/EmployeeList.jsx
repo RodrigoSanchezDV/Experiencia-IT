@@ -88,52 +88,56 @@ export default function EmployeeList() {
     <div>
       <Header />
       <div className="employee-list-container">
-        <div className="text-employee-list">
-          <h2 className="h2-employee-list">
-            <div className="left-icon">
-              <i className="fa-solid fa-arrow-left"></i>
-            </div>
-            Lista de Empleados
-          </h2>
-        </div>
+      <div className="text-employee-list">
+  <h2 className="h2-employee-list">
+    <div className="left-icon">
+      <i className="fa-solid fa-arrow-left"></i>
+    </div>
+    <div className="text-center">
+      Lista de Empleados
+    </div>
+  </h2>
+</div>
 
 
-        <SearchBar onSearch={handleSearch} />
-        <table>
-          <thead>
-            <tr>
-              <th>
-                Apellido{" "}
-                <select onChange={handleSortByLastName}>
-                  <option value="asc">Ascendente</option>
-                  <option value="desc">Descendente</option>
-                </select>
-              </th>
-              <th>Nombre</th>
-              <th>Fecha Ingreso</th>
-              <th>Sector</th>
-              <th>Usuario</th>
-              <th>Email</th>
-              <th>Trabajo</th>
-              {/* Agregar otras columnas según tus necesidades */}
-            </tr>
-          </thead>
-          <tbody>
-            {employees.map((employee, index) => (
-              <tr key={index}>
-                <td>{employee.lastName}</td>
-                <td>{employee.name}</td>
-                <td>{employee.joinDate}</td>
-                <td>{employee.department}</td>
-                <td>{employee.user}</td>
-                <td>{employee.email}</td>
-                <td>{employee.job}</td>
-                {/* Agregar datos de otras columnas según corresponda */}
-              </tr>
-            ))}
-          </tbody>
 
-        </table>
+<div className="searchbar-employeelist-container">
+  <div className="left-content">
+    <SearchBar className="searchbar-employeelist" onSearch={handleSearch} />
+   
+  </div>
+  <div className="right-content">
+    <select onChange={handleSortByLastName}>
+      <option value="asc">Ascendente</option>
+      <option value="desc">Descendente</option>
+    </select>
+  </div>
+</div>
+
+<div class="employee-card">
+  <div class="employee-image">
+    <img src="../../img-persona.jpg" alt="Imagen del empleado"/>
+  </div>
+  <div class="employee-details">
+    <div class="top-details">
+      <div class="employee-name">Nombre: Juan</div>
+      <div class="employee-lastname">Apellido: Pérez</div>
+      <div class="employee-sector">Sector: Ventas</div>
+    </div>
+    <div class="bottom-details">
+      <div class="employee-email">Email: juan@example.com</div>
+      <div class="employee-username">Usuario: juanperez</div>
+      <div class="employee-join-date">Fecha de Ingreso: 01/01/2023</div>
+    </div>
+  </div>
+  <div class="employee-buttons">
+    <button class="edit-button">Editar</button>
+    <button class="delete-button">Eliminar</button>
+  </div>
+</div>
+
+
+
         <div>
           <button>Añadir nuevo empleado</button>
         </div>
@@ -141,3 +145,40 @@ export default function EmployeeList() {
     </div>
   );
 }
+
+
+
+
+
+// <table>
+// <thead>
+//   <tr>
+//     <th>
+//       Apellido{" "}
+      
+//     </th>
+//     <th>Nombre</th>
+//     <th>Fecha Ingreso</th>
+//     <th>Sector</th>
+//     <th>Usuario</th>
+//     <th>Email</th>
+//     <th>Trabajo</th>
+
+//   </tr>
+// </thead>
+// <tbody>
+//   {employees.map((employee, index) => (
+//     <tr key={index}>
+//       <td>{employee.lastName}</td>
+//       <td>{employee.name}</td>
+//       <td>{employee.joinDate}</td>
+//       <td>{employee.department}</td>
+//       <td>{employee.user}</td>
+//       <td>{employee.email}</td>
+//       <td>{employee.job}</td>
+     
+//     </tr>
+//   ))}
+// </tbody>
+
+// </table>

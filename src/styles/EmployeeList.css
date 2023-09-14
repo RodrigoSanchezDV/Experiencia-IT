@@ -7,26 +7,68 @@
   }
   /* Tu archivo CSS personalizado */
 
-.text-employee-list {
-  display: flex;
-  align-items: center; /* Centrar verticalmente el contenido */
-  width: 80%;
-  margin: 0 auto;
-  padding: 10px;
-}
-
-.left-icon {
-  margin-right: 10px; /* Espacio a la derecha del icono (ajusta según sea necesario) */
-}
-
-
-  .h2-employee-list{
-    background-color: #13293D;
-    width: 100%;
-    margin: 50px;
-    color: white;
-    text-align: center;
+  .text-employee-list {
+    display: flex;
+    align-items: center; /* Centrar verticalmente el contenido */
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px;
   }
+  
+  .h2-employee-list {
+    background-color: #13293D;
+    display: flex; /* Alinea el contenido en una sola línea */
+    align-items: center; /* Centra verticalmente el contenido dentro del fondo azul */
+    color: white;
+    padding: 10px; /* Espacio interno dentro del fondo azul (ajusta según sea necesario) */
+    width: 100%; /* Cambiamos el ancho al 100% para que ocupe todo el contenedor */
+  }
+  
+  .left-icon {
+    margin-right: 10px; /* Espacio a la derecha del icono (ajusta según sea necesario) */
+    color: white;
+  }
+  
+  .text-center {
+    flex: 1; /* El texto se expandirá para llenar el espacio restante */
+    text-align: center; /* Centra horizontalmente el texto */
+  }
+  
+  .searchbar-employeelist-container {
+    display: flex;
+    width: 80%; /* Cambiamos el ancho a 80% */
+    margin: 0 auto; /* Centramos el contenido horizontalmente */
+    justify-content: space-between; /* Espacio entre los contenidos izquierdo y derecho */
+    
+  }
+  
+  .left-content {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .searchbar-employeelist,
+  button {
+    background-color: #1E6695;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    width: 100px;
+    height: 30px;
+    margin-right: 50px;
+  }
+  
+  .searchbar-employeelist,input {
+    width: 1000px;
+    border-color: #1E6695;
+  }
+  
+  .right-content {
+    display: flex;
+    align-items: center;
+  }
+  
   
   table {
     width: 80%; /* Ajusta el ancho de la tabla según tus preferencias */
@@ -42,4 +84,98 @@
   th {
     background-color: #f2f2f2; /* Color de fondo para las celdas de encabezado */
   }
+  
+
+
+
+
+
+
+  .employee-card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 20px;
+    width: 79%;
+    border-radius: 10px;
+    background-color: #E8F1F2;
+  }
+  
+  .employee-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px;
+  }
+  
+  .employee-details {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  .employee-details .top-details,
+  .employee-details .bottom-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .employee-details .top-details {
+    margin-right: 10px; /* Espacio entre las columnas */
+  }
+  
+  .employee-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .edit-button,
+  .delete-button {
+    padding: 5px 10px;
+    margin-top: 5px;
+    background-color: #1E6695;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+  /*   
+  .employee-details .top-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .employee-details .bottom-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  .employee-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .edit-button, .delete-button {
+    padding: 5px 10px;
+    margin-top: 5px;
+    background-color: #1E6695;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  } */
+  
+  /* Estilo adicional según sea necesario */
   
