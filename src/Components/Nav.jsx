@@ -28,6 +28,12 @@ export default function Nav() {
         <Link to="/check" className="nav-item">
           Ingresar
         </Link>
+        <Link to="/perfilrecruiter" className="nav-item">
+          perfilrecruiter
+        </Link>
+        <Link to="/login" className="nav-item">
+          login
+        </Link>
         <button
           type="button"
           className="nav-item"

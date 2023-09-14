@@ -91,7 +91,7 @@ export default function EmployeeList() {
         <div className="text-employee-list">
           <h2 className="h2-employee-list">
             <div className="left-icon">
-              <i class="fa-solid fa-arrow-left"></i>
+              <i className="fa-solid fa-arrow-left"></i>
             </div>
             Lista de Empleados
           </h2>

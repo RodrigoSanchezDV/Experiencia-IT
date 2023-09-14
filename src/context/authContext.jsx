@@ -10,9 +10,10 @@ const AuthContextComponent = ({ children })=>{
   const [logged, setLogged] = useState(false)
 
   const handleLogin = ( userLogged ) => {
-    console.log(userLogged)
     setUser(userLogged)
     setLogged(true)
+    console.log("Se inicio sesion")
+    /* navigate("/") */
   }
   
   const handleLogOut = () => {  
@@ -20,7 +21,8 @@ const AuthContextComponent = ({ children })=>{
     console.log(logged)
     setUser({})
     setLogged(false)
-    navigate("/login")
+    console.log("Se cerro la sesion")
+    /* navigate("/login") */
   }
   const data = {
     user,

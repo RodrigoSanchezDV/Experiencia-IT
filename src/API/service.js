@@ -12,7 +12,7 @@ export const apiService = {
     let res = {
         status: true,
         data:{
-          roll: "solicitantes",
+          roll: "recruiter",
           id: "1",
           email: "xxprueba@gmail.com",
           user_name: "Rodrigo Sanchez"
@@ -72,3 +72,14 @@ export const apiService = {
     return res;
   },
 };
+
+
+
+/* 
+const roles = {
+  solicitante,
+  reclutador,
+  empleador,
+  experienciaIT(admin)
+}
+*/
