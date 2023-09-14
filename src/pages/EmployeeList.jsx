@@ -114,25 +114,28 @@ export default function EmployeeList() {
   </div>
 </div>
 
-<div class="employee-card">
-  <div class="employee-image">
+<div className="employee-card">
+  <div className="employee-image">
     <img src="../../img-persona.jpg" alt="Imagen del empleado"/>
   </div>
-  <div class="employee-details">
-    <div class="top-details">
-      <div class="employee-name">Nombre: Juan</div>
-      <div class="employee-lastname">Apellido: Pérez</div>
-      <div class="employee-sector">Sector: Ventas</div>
+  <div className="employee-details">
+    <div className="top-details">
+      <div className="employee-name">Nombre: Juan</div>
+      <div className="employee-lastname">Apellido: Pérez</div>
+      <div className="employee-sector">Sector: Ventas</div>
     </div>
-    <div class="bottom-details">
-      <div class="employee-email">Email: juan@example.com</div>
-      <div class="employee-username">Usuario: juanperez</div>
-      <div class="employee-join-date">Fecha de Ingreso: 01/01/2023</div>
+    <div className="bottom-details"> 
+      <div className="employee-email">Email: juan@example.com</div>
+      <div className="employee-username">Usuario: juanperez</div>
+      
     </div>
   </div>
-  <div class="employee-buttons">
-    <button class="edit-button">Editar</button>
-    <button class="delete-button">Eliminar</button>
+  <div className="employee-buttons">
+  <div className="employee-join-date">Fecha de Ingreso: 01/01/2023</div>
+   <div className="employee-buttons-group">
+    <button className="edit-button">Editar</button>
+    <button className="delete-button">Eliminar</button>
+    </div>
   </div>
 </div>
 

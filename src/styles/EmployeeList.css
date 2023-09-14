@@ -90,7 +90,6 @@
 
 
 
-
   .employee-card {
     display: flex;
     align-items: center;
@@ -100,6 +99,7 @@
     width: 79%;
     border-radius: 10px;
     background-color: #E8F1F2;
+    gap: 30px;
   }
   
   .employee-image img {
@@ -110,16 +110,17 @@
   }
   
   .employee-details {
-    flex-grow: 1;
     display: flex;
-    justify-content: space-between;
+    flex-grow: 1;
+    gap: 30px;
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
   }
-
-
+  
   .employee-details .top-details,
   .employee-details .bottom-details {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
   
   .employee-details .top-details {
@@ -129,8 +130,10 @@
   .employee-buttons {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
   }
+  
+  
   
   .edit-button,
   .delete-button {
@@ -141,10 +144,16 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    
   }
-
-
-
+  
+  /* Agregar una clase para alinear los elementos en bottom-details a la derecha */
+  .employee-buttons-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
 
 
 
