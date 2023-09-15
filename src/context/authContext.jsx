@@ -12,7 +12,6 @@ const AuthContextComponent = ({ children })=>{
   const handleLogin = ( userLogged ) => {
     setUser(userLogged)
     setLogged(true)
-    console.log("Se inicio sesion")
     /* navigate("/") */
   }
   

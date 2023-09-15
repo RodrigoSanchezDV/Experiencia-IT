@@ -22,9 +22,7 @@ const Router = () => (
 
     <Route path="/recuperar-contrasena" element={<PasswordRecovery />} />
 
-    <Route path="/register" element={<Register />} /> 
 
-    <Route path="/check" element={<Check />} /> {/* para redireccionar a los formularios de registro según rol */}
 
     <Route path="/employeelist" element={<EmployeeList />} />
 
@@ -39,7 +37,18 @@ const Router = () => (
     <Route path="/createaccountpage2" element={<CreateAccountPage2 />} />
 
     <Route path="/createaccountpage3" element={<CreateAccountPage3 />} />
-    
+
+
+    {/* SI ESTAS LOGUEADO NO PODES INICIAR EL PROCESO DE REGISTRO */}
+    <Route element={<RouteProtector redirect="/" ruta="/check"/>}>
+      <Route path="/check" element={<Check />} />
+    </Route>
+
+    {/* SI ESTAS LOGUEADO NO PODES IR A REGISTRARTE */}
+    <Route element={<RouteProtector ruta="/register" redirect="/" />}>
+      <Route path="/register" element={<Register />} /> 
+    </Route>
+
     {/* RUTA PROTEGIDAS SOLO PARA RECLUTADORES */}
     <Route element={<RouteProtector rol="reclutador" ruta="/recruiter-profile" redirect="/" />}>
       <Route path="/recruiter-profile" element={<PerfilRecruiter />} />

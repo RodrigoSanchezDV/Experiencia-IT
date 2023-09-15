@@ -3,22 +3,15 @@ import { useContext } from "react";
 import { Outlet, Navigate } from "react-router-dom";
 import { AuthContext } from "../../context/authContext.jsx";
 
-function Prueba( {roll, redirect, ruta}) {
-  console.log({roll, redirect, ruta});
+function RouteProtector({ rol, redirect, ruta }) {
   const { user, logged } = useContext(AuthContext);
   let access = false;
-  
-  if (ruta == "/login") {
-    if (!logged) {
-      access = true;
-    }
-  }
-  if (ruta == "/recruiter-profile") {
-    if (user.rol == "reclutador") {
-      access = true;
-    }
-  }
-  return access ? <Outlet /> : <Navigate to={redirect}/>
+  console.log(user);
+
+  if (ruta == "/login" || ruta == "/register" || ruta == "/check") !logged ? (access = true) : (access = false);
+  if (ruta == "/recruiter-profile") user.rol == "reclutador" ? (access = true) : (access = false);
+
+  return access ? <Outlet /> : <Navigate to={redirect} />;
 }
 
-export default Prueba;
+export default RouteProtector;
