@@ -1,6 +1,9 @@
 import Routes from "./router/Routes.jsx"
+import AuthContextComponent from "../src/context/authContext.jsx";
 const App = () => (
-  <Routes/>
+  <AuthContextComponent>
+    <Routes/>
+  </AuthContextComponent>
 );
 
 export default App;

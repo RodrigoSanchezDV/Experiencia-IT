@@ -38,7 +38,6 @@ const Router = () => (
 
     <Route path="/createaccountpage3" element={<CreateAccountPage3 />} />
 
-
     {/* SI ESTAS LOGUEADO NO PODES INICIAR EL PROCESO DE REGISTRO */}
     <Route element={<RouteProtector ruta="/check" redirect="/"/>}>
       <Route path="/check" element={<Check />} />
