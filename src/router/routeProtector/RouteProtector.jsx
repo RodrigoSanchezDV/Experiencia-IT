@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { Outlet, Navigate } from "react-router-dom";
 import { AuthContext } from "../../context/authContext.jsx";
 
-function RouteProtector({ rol, redirect, ruta }) {
+function RouteProtector({ ruta, redirect }) {
   const { user, logged } = useContext(AuthContext);
   let access = false;
   console.log(user);
