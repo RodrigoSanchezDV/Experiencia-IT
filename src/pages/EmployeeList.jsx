@@ -1,55 +1,55 @@
 import React, { useState } from "react";
 import "../styles/EmployeeList.css"; // Importa tu archivo CSS para estilos personalizados
-import SearchBar from "../Components/SearchBar";
+// import SearchBar from "../Components/SearchBar";
 import Header from "../Components/Header";
-
+import Footer2 from "../Components/Footer2";
 
 export default function EmployeeList() {
   const initialEmployees = [
     {
-      lastName: "aGomez",
-      name: "Nombre 1",
-      joinDate: "01/01/2022",
-      department: "Departamento 1",
-      user: 50000,
-      email: "correo1@example.com",
-      job: "Trabajo 1",
+      lastName: "Perez",
+      name: "Juan",
+      sector: "Ventas",
+      user: "juanperez",
+      email: "juan@example.com",
+      date: "01/01/2023",
+      img: "../../img-persona.jpg",
     },
     {
-      lastName: "bLopez",
-      name: "Nombre 2",
-      joinDate: "02/01/2022",
-      department: "Departamento 2",
-      user: 60000,
-      email: "correo2@example.com",
-      job: "Trabajo 2",
+      lastName: "Sanchez",
+      name: "Lucas",
+      sector: "Ventas",
+      user: "juanperez",
+      email: "juan@example.com",
+      date: "01/01/2023",
+      img: "../../img-manos.png",
     },
     {
-      lastName: "cPerez",
-      name: "Nombre 3",
-      joinDate: "03/01/2022",
-      department: "Departamento 1",
-      user: 55000,
-      email: "correo3@example.com",
-      job: "Trabajo 3",
+      lastName: "Perez",
+      name: "Juan",
+      sector: "Ventas",
+      user: "juanperez",
+      email: "juan@example.com",
+      date: "01/01/2023",
+      img: "../../img-persona.jpg",
     },
     {
-      lastName: "dDiaz",
-      name: "Nombre 4",
-      joinDate: "04/01/2022",
-      department: "Departamento 3",
-      user: 70000,
-      email: "correo4@example.com",
-      job: "Trabajo 4",
+      lastName: "Perez",
+      name: "Juan",
+      sector: "Ventas",
+      user: "juanperez",
+      email: "juan@example.com",
+      date: "01/01/2023",
+      img: "../../img-persona.jpg",
     },
     {
-      lastName: "eGimenez",
-      name: "Nombre 5",
-      joinDate: "05/01/2022",
-      department: "Departamento 2",
-      user: 65000,
-      email: "correo5@example.com",
-      job: "Trabajo 5",
+      lastName: "Perez",
+      name: "Juan",
+      sector: "Ventas",
+      user: "juanperez",
+      email: "juan@example.com",
+      date: "01/01/2023",
+      img: "../../img-persona.jpg",
     },
   ];
 
@@ -88,100 +88,87 @@ export default function EmployeeList() {
     <div>
       <Header />
       <div className="employee-list-container">
-      <div className="text-employee-list">
-  <h2 className="h2-employee-list">
-    <div className="left-icon">
-      <i className="fa-solid fa-arrow-left"></i>
-    </div>
-    <div className="text-center">
-      Lista de Empleados
-    </div>
-  </h2>
-</div>
+        <div className="text-employee-list">
+          <h2 className="h2-employee-list">
+            <div className="left-icon">
+              <i className="fa-solid fa-arrow-left"></i>
+            </div>
+            <div className="text-center">
+              Lista de Empleados
+            </div>
+          </h2>
+        </div>
 
 
 
-<div className="searchbar-employeelist-container">
-  <div className="left-content">
-    <SearchBar className="searchbar-employeelist" onSearch={handleSearch} />
-   
-  </div>
-  <div className="right-content">
-    <select onChange={handleSortByLastName}>
-      <option value="asc">Ascendente</option>
-      <option value="desc">Descendente</option>
-    </select>
-  </div>
-</div>
+        <div className="searchbar-employeelist-container">
 
-<div className="employee-card">
-  <div className="employee-image">
-    <img src="../../img-persona.jpg" alt="Imagen del empleado"/>
-  </div>
-  <div className="employee-details">
-    <div className="top-details">
-      <div className="employee-name">Nombre: Juan</div>
-      <div className="employee-lastname">Apellido: Pérez</div>
-      <div className="employee-sector">Sector: Ventas</div>
-    </div>
-    <div className="bottom-details"> 
-      <div className="employee-email">Email: juan@example.com</div>
-      <div className="employee-username">Usuario: juanperez</div>
-      
-    </div>
-  </div>
-  <div className="employee-buttons">
-  <div className="employee-join-date">Fecha de Ingreso: 01/01/2023</div>
-   <div className="employee-buttons-group">
-    <button className="edit-button">Editar</button>
-    <button className="delete-button">Eliminar</button>
-    </div>
-  </div>
-</div>
+          <div className="searchbar-input-button">
+            <button className="button-search">Buscar</button>
+            <input
+              type="text"
+              placeholder="Buscar..."
+            // value={searchTerm}
+            // onChange={handleSearchChange}
+            />
+          </div>
 
+          <div className="right-content">
+          <strong>Ordenar</strong>
+            <select onChange={handleSortByLastName}>
+              <option value="asc">Ascendente</option>
+              <option value="desc">Descendente</option>
+            </select>
+          </div>
+        </div>
 
+        {employees.map((employee, index) => (
+          <div className="employee-card" key={index}>
+            <div className="employee-image">
+              <img src={employee.img} alt="Imagen del empleado" />
+            </div>
+            <div className="employee-details">
+              <div className="top-details">
+                <div className="employee-name">
+                  <strong>Nombre:</strong> {employee.name}
+                </div>
+                <div className="employee-lastname">
+                  <strong>Apellido:</strong> {employee.lastName}
+                </div>
+                <div className="employee-sector">
+                  <strong>Sector:</strong> {employee.sector}
+                </div>
+              </div>
+              <div className="bottom-details">
+                <div className="employee-email">
+                  <strong>Email:</strong> {employee.email}
+                </div>
+                <div className="employee-username">
+                  <strong>Usuario:</strong> {employee.user}
+                </div>
+              </div>
+            </div>
+            <div className="employee-buttons">
+              <div className="employee-join-date">
+                <strong>Fecha de Ingreso:</strong> {employee.date}
+              </div>
+              <div className="employee-buttons-group">
+                <button className="edit-button">Editar</button>
+                <button className="delete-button">Eliminar</button>
+              </div>
+            </div>
+          </div>
+        ))}
 
         <div>
-          <button>Añadir nuevo empleado</button>
+          <button className="button-new-employee">Añadir nuevo empleado</button>
         </div>
       </div>
+      <Footer2 />
     </div>
+
   );
 }
 
 
 
-
-
-// <table>
-// <thead>
-//   <tr>
-//     <th>
-//       Apellido{" "}
-      
-//     </th>
-//     <th>Nombre</th>
-//     <th>Fecha Ingreso</th>
-//     <th>Sector</th>
-//     <th>Usuario</th>
-//     <th>Email</th>
-//     <th>Trabajo</th>
-
-//   </tr>
-// </thead>
-// <tbody>
-//   {employees.map((employee, index) => (
-//     <tr key={index}>
-//       <td>{employee.lastName}</td>
-//       <td>{employee.name}</td>
-//       <td>{employee.joinDate}</td>
-//       <td>{employee.department}</td>
-//       <td>{employee.user}</td>
-//       <td>{employee.email}</td>
-//       <td>{employee.job}</td>
-     
-//     </tr>
-//   ))}
-// </tbody>
-
-// </table>
