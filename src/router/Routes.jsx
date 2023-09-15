@@ -49,7 +49,7 @@ const Router = () => (
       <Route path="/register" element={<Register />} /> 
     </Route>
 
-    {/* RUTA PROTEGIDAS SOLO PARA RECLUTADORES */}
+    {/* RUTA PROTEGIDA SOLO PARA RECLUTADORES */}
     <Route element={<RouteProtector rol="reclutador" ruta="/recruiter-profile" redirect="/" />}>
       <Route path="/recruiter-profile" element={<PerfilRecruiter />} />
     </Route>
