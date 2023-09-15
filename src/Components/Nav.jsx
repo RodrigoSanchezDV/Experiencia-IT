@@ -28,8 +28,8 @@ export default function Nav() {
         <Link to="/check" className="nav-item">
           Ingresar
         </Link>
-        <Link to="/perfilrecruiter" className="nav-item">
-          perfilrecruiter
+        <Link to="/recruiter-profile" className="nav-item">
+          mi perfil de reclutador
         </Link>
         <Link to="/login" className="nav-item">
           login

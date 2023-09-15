@@ -1,61 +1,6 @@
-import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home.jsx";
-import Login from "./pages/Login.jsx";
-import Register from "./pages/Register.jsx";
-import PasswordRecovery from "./pages/PasswordRecovery.jsx";
-import EmployeeList from "./pages/EmployeeList.jsx";
-import Client from "./pages/Client.jsx";
-import NewClient from "./pages/NewClient.jsx";
-import NewAccount from "./pages/NewAccount.jsx";
-import CreateAccount from "./pages/CreateAccount.jsx";
-import CreateAccountPage2 from "./pages/CreateAccountPage2.jsx";
-import CreateAccountPage3 from "./pages/CreateAccountPage3.jsx";
-import Check from "./pages/Check.jsx";
-import PerfilRecruiter from "./pages/PerfilRecruiter.jsx";
-
-/* AUTORIZACIONES */
-import ProtectedEmpleador from "./protectedProfiles/ProtectedEmpleador.jsx";
-import ProtectedReclutador from "./protectedProfiles/ProtectedReclutador.jsx";
-import ProtectedSolicitante from "./protectedProfiles/ProtectedSolicitante.jsx";
-import ProtectedStandar from "./protectedProfiles/ProtectedStandar.jsx";
-/* -------------- */
+import Routes from "./router/Routes.jsx"
 const App = () => (
-  <Routes>
-    <Route path="/" element={<Home />} />
-
-
-
-
-
-    <Route path="/recuperar-contrasena" element={<PasswordRecovery />} />
-
-    <Route path="/register" element={<Register />} /> 
-
-    <Route path="/check" element={<Check />} /> {/* para redireccionar a los formularios de registro según rol */}
-
-    <Route path="/employeelist" element={<EmployeeList />} />
-
-    <Route path="/client" element={<Client />} />  {/* Lista de clientes */}
-
-    <Route path="/newclient" element={<NewClient />} />  {/* Form para cargar nuevo cliente */}
-
-    <Route path="/newaccount" element={<NewAccount />} /> {/* Registro de nuevos talentos (usa los "createaccount") */}
-
-    <Route path="/createaccount" element={<CreateAccount />} />
-
-    <Route path="/createaccountpage2" element={<CreateAccountPage2 />} />
-
-    <Route path="/createaccountpage3" element={<CreateAccountPage3 />} />
-    
-    {/* RUTAS PROTEGIDAS SOLO PARA RECLUTADORES */}
-    <Route element={<ProtectedReclutador/>}>
-      <Route path="/perfilrecruiter" element={<PerfilRecruiter />} />
-    </Route>
-    {/* SI HAY ALGUIEN LOGUEADO  NO PUEDE VOLVER A LOGUEARSE */}
-    <Route element={<ProtectedStandar/>}>
-      <Route path="/login" element={<Login />} />
-    </Route>
-  </Routes>
+  <Routes/>
 );
 
 export default App;
