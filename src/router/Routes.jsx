@@ -15,6 +15,7 @@ import PerfilRecruiter from "../pages/PerfilRecruiter.jsx";
 
 /* AUTORIZACIONES */
 import RouteProtector from "./routeProtector/RouteProtector.jsx";
+import PerfilEmployee from "../pages/PerfilEmployee.jsx";
 /* -------------- */
 const Router = () => (
   <Routes>
@@ -33,6 +34,8 @@ const Router = () => (
     <Route path="/newaccount" element={<NewAccount />} /> {/* Registro de nuevos talentos (usa los "createaccount") */}
 
     <Route path="/createaccount" element={<CreateAccount />} />
+
+    <Route path="/employee-profile" element={<PerfilEmployee />} />
 
     <Route path="/createaccountpage2" element={<CreateAccountPage2 />} />
 
