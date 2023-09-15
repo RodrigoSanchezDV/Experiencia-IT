@@ -40,7 +40,7 @@ const Router = () => (
 
 
     {/* SI ESTAS LOGUEADO NO PODES INICIAR EL PROCESO DE REGISTRO */}
-    <Route element={<RouteProtector redirect="/" ruta="/check"/>}>
+    <Route element={<RouteProtector ruta="/check" redirect="/"/>}>
       <Route path="/check" element={<Check />} />
     </Route>
 
@@ -50,12 +50,12 @@ const Router = () => (
     </Route>
 
     {/* RUTA PROTEGIDA SOLO PARA RECLUTADORES */}
-    <Route element={<RouteProtector rol="reclutador" ruta="/recruiter-profile" redirect="/" />}>
+    <Route element={<RouteProtector ruta="/recruiter-profile" redirect="/" />}>
       <Route path="/recruiter-profile" element={<PerfilRecruiter />} />
     </Route>
 
     {/* SI HAY ALGUIEN LOGUEADO  NO PUEDE VOLVER A LOGUEARSE */}
-    <Route element={<RouteProtector redirect="/" ruta="/login"/>}>
+    <Route element={<RouteProtector ruta="/login" redirect="/"/>}>
       <Route path="/login" element={<Login />} />
     </Route>
 
