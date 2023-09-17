@@ -43,12 +43,16 @@ export default function PerfilEmployee() {
                             <p className='formato-employee'>Ver CV Adjunto</p>
                         </div>
                         <div className="observations-section-employee">
-                            <label className="label-employee">Observaciones</label>
-                            <textarea className="input-employee" rows="4"></textarea>
-                            <button className="button-section-employee">ENVIAR</button>
+                            <div className="observations-content">
+                                <label className="label-employee">Observaciones</label>
+                                <textarea className="input-employee" rows="4"></textarea>
+                                <button className="button-new-postulation-employee">NUEVA POSTULACION</button>
+                            </div>
+                            
                         </div>
+                        <button className="button-edit-postulation-employee">EDITAR POSTULACION</button>
                     </div>
-
+                   
                 </div>
 
 
@@ -56,21 +60,32 @@ export default function PerfilEmployee() {
                 <div className="right-column-employee">
                     <div className="small-cards-employee ">
                         <div className="small-card-employee custom-centered-employee">
-                            <h3 className="h3-perfilemployee">Clientes asignados</h3>
-                            <button className="button-perfilemployee">VER LISTADO</button>
-                        </div>
-                        <div className="small-card-employee custom-centered-employee">
-                            <h3 className="h3-perfilemployee">Vacantes </h3>
-                            <button className="button-perfilemployee">VER LISTADO</button>
-                        </div>
-                        <div className="small-card-employee custom-centered-employee">
-                            <h3 className="h3-perfilemployee">Lista de postulantes</h3>
-                            <button className="button-perfilemployee">VER LISTADO</button>
-                        </div>
+                            <h3 className="h3-perfilemployee">Detalles de la Solicitud</h3>
+                            <p>Empleo Postulado:</p>
+                            <p>Tipo de Contratación:</p>
+                            <p>Empresa Deseada:</p>
+                            <p>Rol Deseado:</p>
+                            <h3 className="h3-perfilemployee">Experiencia Laboral</h3>
+                            <p>Empresa</p>
+                            <p>Cargo</p>
+                            <p>Duración</p>
+                            <p>+Agregar Experiencia Laboral</p>
+                            <h3 className="h3-perfilemployee">Experiencia Educativa</h3>
+                            <p>Titulo:</p>
+                            <p>Institución:</p>
+                            <p>Año:</p>
+                            <p>+Agregar Experiencia Educativa</p>
+                            <h3 className="h3-perfilemployee">Habilidades</h3>
+                            <inpu></inpu>
+                            <h3 className="h3-perfilemployee">Estado Actual</h3>
+                       <p>En revisión</p>
+                       <p>Fecha de Postulación:</p>
+                       <p>RRHH(Reclutado por):</p>
+                       </div>
                     </div>
                 </div>
             </div>
-            <button className="cerrar-sesion-employee">CERRAR SESIÓN</button>
+            <button className="delete-postulation-employee">ELIMINAR POSTULACIÓN</button>
             <Footer2 />
         </div>
     );

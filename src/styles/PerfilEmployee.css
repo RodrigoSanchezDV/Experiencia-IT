@@ -7,7 +7,6 @@
 .perfil-container-employee {
     display: flex;
     gap: 200px;
-
     justify-content: center;
     min-height: 100vh;
 }
@@ -18,6 +17,7 @@
     align-items: flex-start; */
     gap: 200px;
     margin-top: 20px;
+
 }
 
 
@@ -30,8 +30,23 @@
 }
 
 .right-column-employee {
-    width: 400px;
-    /* Ancho de la columna derecha */
+    margin-top: 30px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.h3-perfilemployee {
+    margin-top: 20px;
+    color: #1E6695;
+    font-size: 20px;
+    
 }
 
 
@@ -94,28 +109,17 @@
 
 .button-section-employee {
     background-color: #13293D;
+
 }
 
-.small-cards-employee {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.small-card-employee {
-
-    background-color: white;
-    padding: 10px;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    height: 200px;
-    width: 400px;
-}
-
-.h3-perfilemployee {
-    margin-top: 20px;
-    color: #1E6695;
-    font-size: 40px;
+.button-new-postulation-employee {
+    background-color: #13293D;
+    color: white;
+    border-radius: 2px;
+    border: 1px solid #13293D;
+    float: right;
+    width: 80%;
+    height: 30px;
 }
 
 
@@ -140,7 +144,7 @@
 }
 
 
-.cerrar-sesion-employee {
+.delete-postulation-employee {
     background-color: #CE3537;
     /* Fondo rojo */
     color: white;
@@ -159,7 +163,7 @@
 }
 
 /* Estilo cuando el mouse pasa por encima del botón */
-.cerrar-sesion-employee:hover {
+.delete-postulation-employee:hover {
     background-color: darkred;
     /* Cambiar el color de fondo al pasar el mouse */
 }
@@ -170,7 +174,7 @@
     width: 100%;
     height: 170px;
     border: 1px dashed black;
-margin: 20px;
+    margin: 20px;
 
 }
 
@@ -201,4 +205,64 @@ margin: 20px;
 .formato-employee {
     margin-top: 0px;
     color: gray;
+}
+
+
+.observations-section-employee {
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.observations-section-employee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    /* Añade margen según sea necesario */
+    width: 100%;
+}
+
+.observations-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    /* Esto hará que el contenido ocupe el mismo ancho que el div */
+}
+
+.button-new-postulation-employee {
+    background-color: #13293D;
+    color: white;
+    border-radius: 2px;
+    border: 1px solid #13293D;
+    width: 100%;
+    /* Hace que el botón ocupe el 100% del ancho de su contenedor */
+    height: 30px;
+    margin-top: 10px;
+}
+
+
+
+.button-edit-postulation-employee {
+    background-color: white;
+    color: #13293D;
+    border: 1px solid #13293D;
+    width: 250px;
+    height: 30px;
+    margin-top: 30px;
+    float: right;
+}
+
+.button-edit-postulation-employee:hover {
+    background-color: #13293D;
+    color: white;
+    border: 1px solid #13293D;
+    width: 250px;
+    height: 30px;
+    margin-top: 30px;
+    float: right;
 }
