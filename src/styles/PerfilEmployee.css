@@ -34,19 +34,28 @@
     width: 500px;
     display: flex;
     flex-direction: column;
-    
     background-color: white;
     padding: 10px;
     margin-bottom: 30px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+gap: 10px;
+
 }
 
 
+
+
+.p-perfilemployee {
+    margin-left: 100px;
+    
+}
+
 .h3-perfilemployee {
+    margin-left: 100px;
     margin-top: 20px;
     color: #1E6695;
     font-size: 20px;
-    
+   text-align: start;
 }
 
 

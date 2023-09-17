@@ -48,41 +48,40 @@ export default function PerfilEmployee() {
                                 <textarea className="input-employee" rows="4"></textarea>
                                 <button className="button-new-postulation-employee">NUEVA POSTULACION</button>
                             </div>
-                            
+
                         </div>
                         <button className="button-edit-postulation-employee">EDITAR POSTULACION</button>
                     </div>
-                   
+
                 </div>
 
 
 
                 <div className="right-column-employee">
-                    <div className="small-cards-employee ">
-                        <div className="small-card-employee custom-centered-employee">
-                            <h3 className="h3-perfilemployee">Detalles de la Solicitud</h3>
-                            <p>Empleo Postulado:</p>
-                            <p>Tipo de Contratación:</p>
-                            <p>Empresa Deseada:</p>
-                            <p>Rol Deseado:</p>
-                            <h3 className="h3-perfilemployee">Experiencia Laboral</h3>
-                            <p>Empresa</p>
-                            <p>Cargo</p>
-                            <p>Duración</p>
-                            <p>+Agregar Experiencia Laboral</p>
-                            <h3 className="h3-perfilemployee">Experiencia Educativa</h3>
-                            <p>Titulo:</p>
-                            <p>Institución:</p>
-                            <p>Año:</p>
-                            <p>+Agregar Experiencia Educativa</p>
-                            <h3 className="h3-perfilemployee">Habilidades</h3>
-                            <inpu></inpu>
-                            <h3 className="h3-perfilemployee">Estado Actual</h3>
-                       <p>En revisión</p>
-                       <p>Fecha de Postulación:</p>
-                       <p>RRHH(Reclutado por):</p>
-                       </div>
-                    </div>
+
+
+                    <h3 className="h3-perfilemployee">Detalles de la Solicitud</h3>
+                    <p className="p-perfilemployee">Empleo Postulado:</p>
+                    <p className="p-perfilemployee">Tipo de Contratación:</p>
+                    <p className="p-perfilemployee">Empresa Deseada:</p>
+                    <p className="p-perfilemployee">Rol Deseado:</p>
+                    <h3 className="h3-perfilemployee">Experiencia Laboral</h3>
+                    <p className="p-perfilemployee">Empresa</p>
+                    <p className="p-perfilemployee">Cargo</p>
+                    <p className="p-perfilemployee">Duración</p>
+                    <p className="p-perfilemployee">+Agregar Experiencia Laboral</p>
+                    <h3 className="h3-perfilemployee">Experiencia Educativa</h3>
+                    <p className="p-perfilemployee">Titulo:</p>
+                    <p className="p-perfilemployee">Institución:</p>
+                    <p className="p-perfilemployee">Año:</p>
+                    <p className="p-perfilemployee">+Agregar Experiencia Educativa</p>
+                    <h3 className="h3-perfilemployee">Habilidades</h3>
+                    <input></input>
+                    <h3 className="h3-perfilemployee">Estado Actual</h3>
+                    <p className="p-perfilemployee">En revisión</p>
+                    <p className="p-perfilemployee">Fecha de Postulación:</p>
+                    <p className="p-perfilemployee">RRHH(Reclutado por):</p>
+
                 </div>
             </div>
             <button className="delete-postulation-employee">ELIMINAR POSTULACIÓN</button>
