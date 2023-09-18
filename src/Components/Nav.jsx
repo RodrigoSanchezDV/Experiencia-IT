@@ -4,7 +4,8 @@ import { apiService } from "../API/service";
 import { AuthContext } from "../context/authContext.jsx"
 import "../styles/Nav.css";
 
-export default function Nav() {
+export default function Nav({setSideMenu:{setSideMenu, sideMenu}}) {
+
   const { handleLogOut, user } = useContext(AuthContext);
   const logOut = async () => {
     const res = await apiService.onLogOut({id:user.id});
@@ -41,7 +42,9 @@ export default function Nav() {
         >
           Cerrar sesion
         </button>
-        
+        <div className="menu-hamburguesa" onClick={() => setSideMenu(!sideMenu)}>
+          <i className="fa-solid fa-bars"></i>
+        </div>
         <div className="mobile-menu">
           <div className="mobile-icon"></div>
         </div>

@@ -1,12 +1,16 @@
+import { useState } from "react"
+import SideMenu from "../Components/SideMenu"
 import Nav from "../Components/Nav";
 import "../styles/Home.css";
 import Footer from "../Components/Footer";
 import imgPrincipal from '/img-principal.png'; // Cambié la ruta de la imagen
 
 export default function Home() {
+    let [sideMenu, setSideMenu] = useState(false)
     return (
         <div className="home-container">
-            <Nav />
+            {sideMenu && <SideMenu setSideMenu={setSideMenu}/>}
+            <Nav setSideMenu={{setSideMenu, sideMenu}}/>
             <div className="img-container">
                 <img src={imgPrincipal} alt="imgPrincipal" />
                 <div className="text-overlay">

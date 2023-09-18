@@ -12,10 +12,10 @@ import CreateAccountPage2 from "../pages/CreateAccountPage2.jsx";
 import CreateAccountPage3 from "../pages/CreateAccountPage3.jsx";
 import Check from "../pages/Check.jsx";
 import PerfilRecruiter from "../pages/PerfilRecruiter.jsx";
+import PerfilEmployee from "../pages/PerfilEmployee.jsx";
 
 /* AUTORIZACIONES */
 import RouteProtector from "./routeProtector/RouteProtector.jsx";
-import PerfilEmployee from "../pages/PerfilEmployee.jsx";
 /* -------------- */
 const Router = () => (
   <Routes>
