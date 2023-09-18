@@ -19,7 +19,7 @@ export default function PerfilEmployee() {
                                 <img src="../../img-persona.jpg" alt="Imagen de perfil" className="foto-perfil-employee" />
                                 <div className="info-employee">
                                     <p className="nombre-perfil-employee">Daniel Roldan Diaz</p>
-                                    <p>It Recruiter JR</p>
+                                    <p>Diseador UX</p>
                                 </div>
                             </div>
                             <div className="bottom-section-employee">
@@ -35,24 +35,16 @@ export default function PerfilEmployee() {
 
                         <div className="cv-upload-employee">
                             <i className="fa-solid fa-file-arrow-up" style={{ fontSize: '40px', marginTop: '5px' }}></i>
-
-                            <label htmlFor="cv-input" className="cv-button-employee">
-                                VER CV
-                                <input type="file" id="cv-input" className="hidden" accept=".pdf, .doc, .docx" />
-                            </label>
                             <p className='formato-employee'>Ver CV Adjunto</p>
                         </div>
                         <div className="observations-section-employee">
                             <div className="observations-content">
                                 <label className="label-employee">Observaciones</label>
-                                <textarea className="input-employee" rows="4"></textarea>
+                                <input className="input-text-employee"></input>
                                 <button className="button-new-postulation-employee">NUEVA POSTULACION</button>
                             </div>
-
                         </div>
-                        <button className="button-edit-postulation-employee">EDITAR POSTULACION</button>
                     </div>
-
                 </div>
 
 
@@ -76,7 +68,7 @@ export default function PerfilEmployee() {
                     <p className="p-perfilemployee">Año:</p>
                     <p className="p-perfilemployee">+Agregar Experiencia Educativa</p>
                     <h3 className="h3-perfilemployee">Habilidades</h3>
-                    <input></input>
+                    <select className="select-perfilemployee" name="" id=""></select>
                     <h3 className="h3-perfilemployee">Estado Actual</h3>
                     <p className="p-perfilemployee">En revisión</p>
                     <p className="p-perfilemployee">Fecha de Postulación:</p>
@@ -84,7 +76,10 @@ export default function PerfilEmployee() {
 
                 </div>
             </div>
-            <button className="delete-postulation-employee">ELIMINAR POSTULACIÓN</button>
+            <div className="buttons-perfilemployee">
+                <button className="button-edit-postulation-employee">EDITAR POSTULACION</button>
+                <button className="delete-postulation-employee">ELIMINAR POSTULACIÓN</button>
+            </div>
             <Footer2 />
         </div>
     );

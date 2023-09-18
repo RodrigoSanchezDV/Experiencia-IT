@@ -13,11 +13,10 @@
 
 .card-container-employee {
     display: flex;
-    /* justify-content: flex-start;
-    align-items: flex-start; */
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: 200px;
-    margin-top: 20px;
-
+    margin-top: 30px;
 }
 
 
@@ -25,7 +24,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 400px;
+    width: 500px;
+    gap: 10px;
     /* Ancho de la columna izquierda */
 }
 
@@ -38,16 +38,14 @@
     padding: 10px;
     margin-bottom: 30px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-gap: 10px;
+    gap: 10px;
 
 }
 
 
-
-
 .p-perfilemployee {
     margin-left: 100px;
-    
+
 }
 
 .h3-perfilemployee {
@@ -55,9 +53,17 @@ gap: 10px;
     margin-top: 20px;
     color: #1E6695;
     font-size: 20px;
-   text-align: start;
+    text-align: start;
 }
 
+.select-perfilemployee{
+    width: 60%;
+    margin-left: 100px;
+    margin-top: 20px;
+    color: #1E6695;
+    font-size: 20px;
+    
+}
 
 
 
@@ -66,7 +72,7 @@ gap: 10px;
     padding: 20px;
     /* flex: 1; */
     height: auto;
-    width: 400px;
+    width: 90%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 
 }
@@ -116,66 +122,6 @@ gap: 10px;
     margin-top: 0px;
 }
 
-.button-section-employee {
-    background-color: #13293D;
-
-}
-
-.button-new-postulation-employee {
-    background-color: #13293D;
-    color: white;
-    border-radius: 2px;
-    border: 1px solid #13293D;
-    float: right;
-    width: 80%;
-    height: 30px;
-}
-
-
-.button-perfilemployee {
-    background-color: #1E6695;
-    color: white;
-    height: 30px;
-    width: 80%;
-    display: flex;
-    align-items: center;
-    margin-top: 40px;
-    justify-content: center;
-    border: none;
-}
-
-.custom-centered-employee {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-
-.delete-postulation-employee {
-    background-color: #CE3537;
-    /* Fondo rojo */
-    color: white;
-    /* Texto blanco */
-    border: none;
-    /* Sin borde */
-    padding: 10px 20px;
-    /* Espaciado interno */
-    border-radius: 10px;
-    /* Bordes redondeados */
-    cursor: pointer;
-    /* Cursor de puntero al pasar el mouse */
-    float: right;
-    /* Alinear a la derecha */
-    margin-right: 320px;
-}
-
-/* Estilo cuando el mouse pasa por encima del botón */
-.delete-postulation-employee:hover {
-    background-color: darkred;
-    /* Cambiar el color de fondo al pasar el mouse */
-}
 
 
 
@@ -184,64 +130,57 @@ gap: 10px;
     height: 170px;
     border: 1px dashed black;
     margin: 20px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.cv-button-employee {
-    width: 100px;
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #1E6695;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-
-}
-
-.cv-button-employee input[type="file"] {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
+.fa-solid.fa-file-arrow-up {
+    color: gray;
 }
 
 .formato-employee {
     margin-top: 0px;
     color: gray;
+    text-align: center;
 }
 
 
-.observations-section-employee {
-
-    align-items: center;
-    justify-content: center;
-}
 
 
 .observations-section-employee {
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    /* Añade margen según sea necesario */
+    width: 100%; */
+    text-align: center;
     width: 100%;
 }
 
 .observations-content {
-    display: flex;
+    display: inline-block;
+    text-align: left;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 100%;
-    /* Esto hará que el contenido ocupe el mismo ancho que el div */
+    width: 100%; */
 }
+
+.label-employee {
+    font-weight: bold;
+}
+
+.input-text-employee {
+    width: 100%;
+    height: 150px;
+    border: 1px solid blue;
+}
+
+
 
 .button-new-postulation-employee {
     background-color: #13293D;
@@ -249,12 +188,22 @@ gap: 10px;
     border-radius: 2px;
     border: 1px solid #13293D;
     width: 100%;
-    /* Hace que el botón ocupe el 100% del ancho de su contenedor */
     height: 30px;
     margin-top: 10px;
 }
 
 
+
+
+/* Botones inferiores */
+
+.buttons-perfilemployee {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+}
 
 .button-edit-postulation-employee {
     background-color: white;
@@ -262,8 +211,6 @@ gap: 10px;
     border: 1px solid #13293D;
     width: 250px;
     height: 30px;
-    margin-top: 30px;
-    float: right;
 }
 
 .button-edit-postulation-employee:hover {
@@ -272,6 +219,16 @@ gap: 10px;
     border: 1px solid #13293D;
     width: 250px;
     height: 30px;
-    margin-top: 30px;
-    float: right;
+}
+
+.delete-postulation-employee {
+    background-color: #CE3537;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.delete-postulation-employee:hover {
+    background-color: darkred;
 }
