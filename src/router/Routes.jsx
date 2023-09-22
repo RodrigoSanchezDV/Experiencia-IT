@@ -13,7 +13,7 @@ import CreateAccountPage3 from "../pages/CreateAccountPage3.jsx";
 import Check from "../pages/Check.jsx";
 import PerfilRecruiter from "../pages/PerfilRecruiter.jsx";
 import PerfilEmployee from "../pages/PerfilEmployee.jsx";
-
+import Vacancies from "../pages/Vacancies.jsx";
 /* AUTORIZACIONES */
 import RouteProtector from "./routeProtector/RouteProtector.jsx";
 /* -------------- */
@@ -23,7 +23,7 @@ const Router = () => (
 
     <Route path="/recuperar-contrasena" element={<PasswordRecovery />} />
 
-
+    <Route path="/vacancies" element={<Vacancies />} />
 
     <Route path="/employeelist" element={<EmployeeList />} />
 
