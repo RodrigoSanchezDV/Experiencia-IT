@@ -71,6 +71,42 @@ export const apiService = {
     return await res.json(); */
     return res;
   },
+  onSearch: async (searchRequest,typeOfSearch) => {
+
+    const searchFor = `/${typeOfSearch}?search=`            //* defino que voy a buscar (vacantes, empleados, postulantes, etc..)
+    const request = searchRequest.trim().replace(" ","&")   //* limpio el string de espacios y lo preparo para la query
+    const url = apiService.URLBASE + searchFor + request;
+    console.log(url);
+    const params = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+    try {
+      const res = await fetch(url,params)
+      searchResponse = res.json()
+      return searchResponse;
+    } catch (error) {
+      console.log({message: "error al intentar buscar", error});
+    }
+  },
+  onSearchAll: async(typeOfSearch)=>{                           //* Trae todo loq ue hayamos buscado (vacancies, empleados, etc..)
+    const url = apiService.URLBASE + `/${typeOfSearch}`
+    const params = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+    try {
+      const res = await fetch(url,params)
+      searchResponse = res.json()
+      return searchResponse;
+    } catch (error) {
+      console.log({message: "error al intentar buscar todos", error});
+    }
+  }
 };
 
 
