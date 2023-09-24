@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home.jsx";
 import Login from "../pages/Login.jsx";
@@ -14,54 +15,62 @@ import Check from "../pages/Check.jsx";
 import PerfilRecruiter from "../pages/PerfilRecruiter.jsx";
 import PerfilEmployee from "../pages/PerfilEmployee.jsx";
 import Vacancies from "../pages/Vacancies.jsx";
+import Nav from "../Components/Nav";
+import SideMenu from "../Components/SideMenu"
 /* AUTORIZACIONES */
 import RouteProtector from "./routeProtector/RouteProtector.jsx";
 /* -------------- */
-const Router = () => (
-  <Routes>
-    <Route path="/" element={<Home />} />
+const Router = () => {
+  let [sideMenu, setSideMenu] = useState(false)
+  return(
+    <div>
+      <Nav setSideMenu={{setSideMenu, sideMenu}}/>
+      {sideMenu && <SideMenu setSideMenu={setSideMenu}/>}
+      <Routes>
+        <Route path="/" element={<Home />} />
 
-    <Route path="/recuperar-contrasena" element={<PasswordRecovery />} />
+        <Route path="/recuperar-contrasena" element={<PasswordRecovery />} />
 
-    <Route path="/vacancies" element={<Vacancies />} />
+        <Route path="/vacancies" element={<Vacancies />} />
 
-    <Route path="/employeelist" element={<EmployeeList />} />
+        <Route path="/employeelist" element={<EmployeeList />} />
 
-    <Route path="/client" element={<Client />} />  {/* Lista de clientes */}
+        <Route path="/client" element={<Client />} />  {/* Lista de clientes */}
 
-    <Route path="/newclient" element={<NewClient />} />  {/* Form para cargar nuevo cliente */}
+        <Route path="/newclient" element={<NewClient />} />  {/* Form para cargar nuevo cliente */}
 
-    <Route path="/newaccount" element={<NewAccount />} /> {/* Registro de nuevos talentos (usa los "createaccount") */}
+        <Route path="/newaccount" element={<NewAccount />} /> {/* Registro de nuevos talentos (usa los "createaccount") */}
 
-    <Route path="/createaccount" element={<CreateAccount />} />
+        <Route path="/createaccount" element={<CreateAccount />} />
 
-    <Route path="/employee-profile" element={<PerfilEmployee />} />
+        <Route path="/employee-profile" element={<PerfilEmployee />} />
 
-    <Route path="/createaccountpage2" element={<CreateAccountPage2 />} />
+        <Route path="/createaccountpage2" element={<CreateAccountPage2 />} />
 
-    <Route path="/createaccountpage3" element={<CreateAccountPage3 />} />
+        <Route path="/createaccountpage3" element={<CreateAccountPage3 />} />
 
-    {/* SI ESTAS LOGUEADO NO PODES INICIAR EL PROCESO DE REGISTRO */}
-    <Route element={<RouteProtector ruta="/check" redirect="/"/>}>
-      <Route path="/check" element={<Check />} />
-    </Route>
+        {/* SI ESTAS LOGUEADO NO PODES INICIAR EL PROCESO DE REGISTRO */}
+        <Route element={<RouteProtector ruta="/check" redirect="/"/>}>
+          <Route path="/check" element={<Check />} />
+        </Route>
 
-    {/* SI ESTAS LOGUEADO NO PODES IR A REGISTRARTE */}
-    <Route element={<RouteProtector ruta="/register" redirect="/" />}>
-      <Route path="/register" element={<Register />} /> 
-    </Route>
+        {/* SI ESTAS LOGUEADO NO PODES IR A REGISTRARTE */}
+        <Route element={<RouteProtector ruta="/register" redirect="/" />}>
+          <Route path="/register" element={<Register />} /> 
+        </Route>
 
-    {/* RUTA PROTEGIDA SOLO PARA RECLUTADORES */}
-    <Route element={<RouteProtector ruta="/recruiter-profile" redirect="/" />}>
-      <Route path="/recruiter-profile" element={<PerfilRecruiter />} />
-    </Route>
+        {/* RUTA PROTEGIDA SOLO PARA RECLUTADORES */}
+        <Route element={<RouteProtector ruta="/recruiter-profile" redirect="/" />}>
+          <Route path="/recruiter-profile" element={<PerfilRecruiter />} />
+        </Route>
 
-    {/* SI HAY ALGUIEN LOGUEADO  NO PUEDE VOLVER A LOGUEARSE */}
-    <Route element={<RouteProtector ruta="/login" redirect="/"/>}>
-      <Route path="/login" element={<Login />} />
-    </Route>
-
-  </Routes>
-);
+        {/* SI HAY ALGUIEN LOGUEADO  NO PUEDE VOLVER A LOGUEARSE */}
+        <Route element={<RouteProtector ruta="/login" redirect="/"/>}>
+          <Route path="/login" element={<Login />} />
+        </Route>
+      </Routes>
+    </div>
+  )
+};
 
 export default Router;

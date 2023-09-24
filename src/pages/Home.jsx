@@ -9,8 +9,6 @@ export default function Home() {
     let [sideMenu, setSideMenu] = useState(false)
     return (
         <div className="home-container">
-            {sideMenu && <SideMenu setSideMenu={setSideMenu}/>}
-            <Nav setSideMenu={{setSideMenu, sideMenu}}/>
             <div className="img-container">
                 <img src={imgPrincipal} alt="imgPrincipal" />
                 <div className="text-overlay">
