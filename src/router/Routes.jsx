@@ -18,6 +18,7 @@ import Vacancies from "../pages/Vacancies.jsx";
 import Nav from "../Components/Nav";
 import SideMenu from "../Components/SideMenu"
 import { AuthContext } from "../context/authContext.jsx"
+import About from "../pages/About.jsx";
 /* AUTORIZACIONES */
 import RouteProtector from "./routeProtector/RouteProtector.jsx";
 /* -------------- */
@@ -32,6 +33,8 @@ const Router = () => {
         <Route path="/" element={<Home />} />
 
         <Route path="/recuperar-contrasena" element={<PasswordRecovery />} />
+
+        <Route path="/about" element={<About />} />
 
         <Route path="/vacancies" element={<Vacancies />} />
 
