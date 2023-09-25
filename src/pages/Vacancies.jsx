@@ -1,4 +1,3 @@
-import React from "react";
 import "../styles/Vacancies.css";
 import Footer2 from "../Components/Footer2";
 import SearchBar from "../Components/SearchBar";

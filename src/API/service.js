@@ -85,8 +85,7 @@ export const apiService = {
     };
     try {
       const res = await fetch(url,params)
-      searchResponse = res.json()
-      return searchResponse;
+      return await res.json()
     } catch (error) {
       console.log({message: "error al intentar buscar", error});
     }
@@ -106,6 +105,33 @@ export const apiService = {
     } catch (error) {
       console.log({message: "error al intentar buscar todos", error});
     }
+  },
+  getProfile: async userID => {
+    const url = apiService.URLBASE + "/profile/"
+    const data = {
+      userID
+    };
+    const params = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body:JSON.stringify(data)
+    };
+    let res = {
+      name: "Rodrigo Sanchez",
+      pais: "Argentina",
+      provincia: "Rio Negro",
+      edad: "21",
+      fecha_nacimiento: "21/03/2002"
+    }
+/*     try {
+      res = await fetch(url,params)  
+    } catch (error) {
+      console.log({message: "error al obtener el perfil", error});
+    } */
+  /* return await res.json() */
+  return res
   }
 };
 

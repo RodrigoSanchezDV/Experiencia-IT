@@ -1,9 +1,21 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import "../styles/PerfilRecruiter.css";
 import Header from "../Components/Header";
 import Footer2 from "../Components/Footer2";
-
+import { apiService} from "../API/service.js";
+import { useContext } from "react";
+import { AuthContext } from "../context/authContext.jsx"
 export default function PerfilRecruiter() {
+    const { user } = useContext(AuthContext);
+    const [profileData, setProfileData] = useState({});
+    useEffect(() => {
+        (async () => {
+            let res = await apiService.getProfile(user.id)
+
+            setProfileData(res)
+            console.log(res)
+        })()
+    }, [])
     return (
         <div>
             <Header />
@@ -16,7 +28,7 @@ export default function PerfilRecruiter() {
                             
                             <img src="../../img-persona.jpg" alt="Imagen de perfil" className="foto-perfil" />
                             <div className="info">
-                                <p className="nombre-perfil">Daniel Roldan Diaz</p>
+                                <p className="nombre-perfil">{profileData.name}</p>
                                 <p>It Recruiter JR</p>
                             </div>
                         </div>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home.jsx";
 import Login from "../pages/Login.jsx";
@@ -17,11 +17,13 @@ import PerfilEmployee from "../pages/PerfilEmployee.jsx";
 import Vacancies from "../pages/Vacancies.jsx";
 import Nav from "../Components/Nav";
 import SideMenu from "../Components/SideMenu"
+import { AuthContext } from "../context/authContext.jsx"
 /* AUTORIZACIONES */
 import RouteProtector from "./routeProtector/RouteProtector.jsx";
 /* -------------- */
 const Router = () => {
   let [sideMenu, setSideMenu] = useState(false)
+  const { user } = useContext(AuthContext);
   return(
     <div>
       <Nav setSideMenu={{setSideMenu, sideMenu}}/>
@@ -61,7 +63,7 @@ const Router = () => {
 
         {/* RUTA PROTEGIDA SOLO PARA RECLUTADORES */}
         <Route element={<RouteProtector ruta="/recruiter-profile" redirect="/" />}>
-          <Route path="/recruiter-profile" element={<PerfilRecruiter />} />
+          <Route path={`/recruiter-profile/:${user.user_name}`} element={<PerfilRecruiter />} />
         </Route>
 
         {/* SI HAY ALGUIEN LOGUEADO  NO PUEDE VOLVER A LOGUEARSE */}

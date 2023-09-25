@@ -6,7 +6,7 @@ import "../styles/Nav.css";
 
 export default function Nav({setSideMenu:{setSideMenu, sideMenu}}) {
 
-  const { handleLogOut, user } = useContext(AuthContext);
+  const { handleLogOut, user, logged } = useContext(AuthContext);
   const logOut = async () => {
     const res = await apiService.onLogOut({id:user.id});
     if (res) {
@@ -20,28 +20,28 @@ export default function Nav({setSideMenu:{setSideMenu, sideMenu}}) {
         <img src="/logo.png" alt="logo header" />
       </div>
       <div className="navbar-right">
+        <Link to="/" className="nav-item">
+          HOME
+        </Link>
         <Link href="#" className="nav-item">
           Sobre nosotros
         </Link>
         <Link href="#" className="nav-item">
           Buscar Empleo
         </Link>
-        <Link to="/check" className="nav-item">
-          Ingresar
-        </Link>
-        <Link to="/recruiter-profile" className="nav-item">
-          mi perfil de reclutador
-        </Link>
-        <Link to="/login" className="nav-item">
-          login
-        </Link>
-        <button
-          type="button"
-          className="nav-item"
-          onClick={ logOut }
-        >
-          Cerrar sesion
-        </button>
+        {
+          logged == false? <Link to="/check" className="nav-item">Ingresar</Link> : ""
+        }
+        {
+          user?.rol == "reclutador"? <Link to={`/recruiter-profile/${user.user_name}`} className="nav-item">mi perfil de reclutador</Link> : ""
+        }
+        {
+          logged == false? <Link to="/login" className="nav-item">login</Link> : ""
+        }
+        {
+          logged == true? <button type="button"className="nav-item"onClick={ logOut }> Cerrar sesion </button> : ""
+        }
+        
         <div className="menu-hamburguesa" onClick={() => setSideMenu(!sideMenu)}>
           <i className="fa-solid fa-bars"></i>
         </div>
